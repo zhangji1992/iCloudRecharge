@@ -1,0 +1,5 @@
+<ion-slides [options]="adSlideOptions">
+    <ion-slide *ngFor="let ad of adService.adBannerData">
+        <img [attr.src]="imgSrc+ad.advert.smallPic" (click)="goToDetail(ad.advert.advertId)">
+    </ion-slide>
+</ion-slides>

@@ -1,0 +1,12 @@
+<ion-grid class="adLayout2">
+    <ion-row>
+        <ion-col width-33 *ngFor="let item of adData" (click)="goToDetail(item.advert.advertId)">
+            <div>
+                <h2>{{item.advert.titile}}</h2>
+                <p>{{item.advert.subTitle}}</p>
+                <img [attr.src]="imgSrc + item.advert.smallPic"/>
+            </div>
+        </ion-col>
+
+    </ion-row>
+</ion-grid>

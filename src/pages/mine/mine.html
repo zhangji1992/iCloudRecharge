@@ -1,0 +1,97 @@
+<ion-content class="content">
+    <user-status></user-status>
+    <ion-list class="list-up">
+        <ion-item class="list-item" (click)="toPay()" *ngIf="userService.getUserInfo().status">
+            <div class="roundedSquare squareColor1" item-left>
+                <ion-icon name="list" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                我的支付账户
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="gotoFieldCard()" *ngIf="userService.getUserInfo().status">
+            <div class="roundedSquare squareColor2" item-left>
+                <ion-icon name="card" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                我的行业卡
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+
+    <ion-list class="list-middle">
+        <ion-item class="list-item" (click)="goTest()" *ngIf="userService.getUserInfo().status">
+            <div class="roundedSquare squareColor3" item-left>
+                <ion-icon name="person" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                个人中心
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="goMessages()" *ngIf="userService.getUserInfo().status">
+            <div class="roundedSquare squareColor4" item-left>
+                <ion-icon name="text" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                我的消息
+                <span class="circleBG" *ngIf="message.unreadNum">{{message.unreadNum}}</span>
+            </div>
+            <ion-icon name="arrow-forward" class="iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="goTodo()" *ngIf="userService.getUserInfo().status">
+            <div class="roundedSquare squareColor5" item-left>
+                <ion-icon name="alarm" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                待办事项
+                <span class="circleBG" *ngIf="todoService.todoObject.showNum">{{todoService.todoObject.num}}</span>
+            </div>
+            <ion-icon name="arrow-forward" class="iconRight" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+    <ion-list class="list-down">
+        <ion-item class="list-item" (click)="goLatestVer()">
+            <div class="roundedSquare squareColor6" item-left>
+                <ion-icon name="information-circle" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                版本信息
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="goAboutApp()">
+            <div class="roundedSquare squareColor7" item-left>
+                <ion-icon name="contact" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                关于App
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="goFeedback()">
+            <div class="roundedSquare squareColor8" item-left>
+                <ion-icon name="star" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                意见反馈
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+        <ion-item class="list-item" (click)="Share()">
+            <div class="roundedSquare squareColor9" item-left>
+                <ion-icon name="share-alt" class="listIcon"></ion-icon>
+            </div>
+            <div>
+                分享
+            </div>
+            <ion-icon name="arrow-forward" class="listIcon iconRight" item-right></ion-icon>
+        </ion-item>
+    </ion-list>
+
+    <!--<button ion-button class="btn-content" (click)="test()" *ngIf="!userService.getUserInfo().status">登 录</button>-->
+    <button ion-button class="btn-content" (click)="logout()" *ngIf="userService.getUserInfo().status">退 出</button>
+
+</ion-content>

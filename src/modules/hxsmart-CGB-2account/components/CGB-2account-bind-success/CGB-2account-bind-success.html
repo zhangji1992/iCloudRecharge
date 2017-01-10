@@ -1,0 +1,20 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>广发银行Ⅱ类账户</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="3" [stepCon]="['实名信息','增加支付账户','完成']"></tool-steps>
+    <!--<div class="tip">-->
+    <!--<div class="tipContent" text-center>-->
+    <!--<div class="tipNum">尊敬的：{{navParams.get('name')}}</div>-->
+    <!--<div class="tipDetail">添加支付账户成功</div>-->
+    <!--<div style="margin-top: 3em">3秒后，自动返回</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="wrap" text-center>
+        <div class="img"><img src="assets/compus/suc.png" alt=""></div>
+        <div class="word1">尊敬的：{{navParams.get('name')}}</div>
+        <div class="word2">恭喜你绑定成功,3s后返回</div>
+    </div>
+</ion-content>

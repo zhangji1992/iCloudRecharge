@@ -1,0 +1,29 @@
+<ion-header no-border>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            行业卡详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #f0f0f0">
+    <div class="topDivide"></div>
+    <ion-list class="list">
+        <ion-item>
+            <span class="span01">卡号：</span>
+            <span class="span02">{{navParams.data.GasCardNo}}</span>
+        </ion-item>
+
+        <ion-item>
+            <span class="span01">燃气公司：</span>
+            <span class="span02">{{navParams.data.SupplierName}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">绑定事件：</span>
+            <span class="span02">{{navParams.data.Fromdate}}</span>
+        </ion-item>
+
+    </ion-list>
+    <div class="myDefFullBtn" block (click)="removeBind()">解除绑定</div>
+</ion-content>
+

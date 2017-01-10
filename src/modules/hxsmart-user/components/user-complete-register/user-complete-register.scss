@@ -1,0 +1,54 @@
+user-complete-register {
+
+}
+
+user-complete-register div ion-icon.completeIcon {
+    font-size: 63px;
+    color: #fff;
+    background-color: #33CC33;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    line-height: 60px;
+    text-align: center;
+    margin-left: -30px;
+    margin-top: 4px;
+    padding: -27px;
+    position: absolute;
+}
+
+user-complete-register .completeRES {
+    font-family: "Microsoft YaHei";
+    background-color: #F0F0F0;
+}
+
+user-complete-register .completeRES .scroll-content {
+    overflow-y: auto;
+}
+
+user-complete-register .backgroundPic {
+    background-color: #A7E2A7;
+    width: 68px;
+    height: 68px;
+    border-radius: 34px;
+    padding: -71px;
+    margin: 0 auto;
+}
+
+user-complete-register .bigBtn {
+    color: white;
+    background-color: #2A84C3;
+    margin: 60px auto;
+    width: 94%;
+}
+
+user-complete-register .completeText {
+    font-family: "Microsoft YaHei";
+    margin-top: 13px;
+    font-size: 18px;
+
+}
+
+user-complete-register .header-md:after {
+    border-top: 1px solid #DDDDDD;
+}

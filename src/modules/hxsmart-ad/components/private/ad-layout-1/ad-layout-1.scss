@@ -1,0 +1,51 @@
+.adLayout1 {
+    margin-bottom: 0;
+    margin-top: 0;
+    background-color: white;
+
+    ion-item {
+        margin-top: 0;
+        background-color: white;
+        border-bottom: none;
+
+        ion-thumbnail {
+            min-width: 12.5rem;
+            min-height: inherit;
+
+            img {
+                max-width: 12.5rem;
+                max-height: inherit;
+            }
+        }
+        .item-inner {
+            .input-wrapper {
+                ion-label {
+                    h2 {
+                        white-space: normal;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.adLayout1 .item-ios ion-thumbnail {
+    min-width: 12.5rem;
+    min-height: inherit;
+}
+
+.adLayout1 .item-ios ion-thumbnail img {
+    max-width: 12.5rem;
+    max-height: inherit;
+}
+
+.list-ios > .item-block:first-child {
+    border-top: none;
+}
+
+.list-ios > .item-block:last-child {
+    border-bottom: none;
+}
+

@@ -1,0 +1,86 @@
+user-volid-mobile {
+    font-family: "Microsoft YaHei";
+    background-color: #ECF1F0;
+
+    .mobile-list {
+        background-color: #ffffff;
+        border: solid 1px #E9E9E9;
+
+        .rowLine {
+            border-bottom: solid 1px #DDDDDD;
+            width: 98%;
+            margin: auto;
+        }
+    }
+}
+
+user-volid-mobile .verifyMobileContent {
+    margin-top: 2em;
+}
+
+user-volid-mobile input {
+    border: none;
+}
+
+user-volid-mobile .listItem .mobileLbl {
+    padding-left: 5%;
+    font-size: 16px;
+}
+
+user-volid-mobile .listItem input {
+    height: 56px;
+    width: 40%;
+    font-size: 16px;
+}
+
+user-volid-mobile .listItem button {
+    height: 34px;
+    width: 30%;
+    float: right;
+    color: #2A84C3;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px;
+    margin-right: 5%;
+    margin-top: 11px;
+    line-height: 32px;
+}
+
+user-volid-mobile .item-down .codeLbl {
+    padding-left: 5%;
+    font-size: 16px;
+}
+
+user-volid-mobile .verify {
+    height: 56px;
+    width: 75%;
+    color: #000000;
+    font-size: 16px;
+}
+
+user-volid-mobile .isShowChg .chgOpt {
+    height: 10px;
+}
+
+user-volid-mobile .isShowChg .chgOpt button {
+    float: right;
+    margin-right: 5%;
+    background-color: #f0f0f0;
+    color: #2A84C3;
+    font-size: 17px;
+}
+
+user-volid-mobile .verifyLimit {
+    color: #CBCCCC
+}
+
+user-volid-mobile .bigBtn {
+    color: white;
+    font-size: 20px;
+    background-color: #2A84C3;
+    height: 40px;
+}
+
+user-volid-mobile .btnDiv {
+    padding-top: 3em;
+}

@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            校园卡详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #f0f0f0">
+    <div class="topDivide"></div>
+    <ion-list class="list">
+        <ion-item>
+            <span class="span01">姓名：</span>
+            <span class="span02">{{navParams.data.HoldClientNname}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">卡状态：</span>
+            <span class="span02">{{navParams.data.ClientStatus}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">学校：</span>
+            <span class="span02">{{navParams.data.SupplierName}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">班级：</span>
+            <span class="span02">{{navParams.data.Clazz}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">校园卡号：</span>
+            <span class="span02">{{navParams.data.CardNo}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">监护人：</span>
+            <span class="span02">{{navParams.data.GuardianName}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">监护人手机号：</span>
+            <span class="span02">{{navParams.data.GuardianPhone}}</span>
+        </ion-item>
+    </ion-list>
+    <div class="myDefFullBtn" block (click)="removeBind()">解除绑定</div>
+</ion-content>
+

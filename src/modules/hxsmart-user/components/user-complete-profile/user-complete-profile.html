@@ -1,0 +1,10 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>完善个人资料</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content">
+    <p class="bindEmailTip">添加邮箱</p>
+    <user-volid-email [verifyType]="verifyType" [nextStr]="nextStr"
+                      (confirmAfter)="confirmAfter($event)"></user-volid-email>
+</ion-content>

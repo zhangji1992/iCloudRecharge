@@ -1,0 +1,41 @@
+<ion-content class="register" [class.scrollbar-y]="false">
+    <div (click)="goBack()">
+        <ion-icon style="font-size: 3.4rem" name="md-arrow-back" class="arrow1"></ion-icon>
+    </div>
+    <div text-center style="padding: 10px 0 20px 0;" class="headerBg">
+        <img src="assets/user/head.png" alt="">
+    </div>
+    <form #loginform="ngForm" class="login_form">
+        <ion-item>
+            <ion-label>
+                <i class="icon iconfont icon-ren" style="color: #2A84C3;font-size: 24px"></i>
+                <!--<img src="assets/user/ison1.png" class="phoneLogo" alt="">-->
+            </ion-label>
+            <ion-input placeholder="请输入你的手机号" type="text" [pattern]="'^[1][34578][0-9]{9}$'"
+                       [(ngModel)]="userPhone" name="name" class="textMsg" clearInput></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <i class="iconfont icon-suo" style="color: #2A84C3;font-size: 24px"></i>
+                <!--<img src="assets/user/icon2.png" class="pwdLogo" alt="">-->
+            </ion-label>
+            <ion-input placeholder="请输入密码" type="password" [pattern]="'^[A-Za-z0-9]{6,12}$'"
+                       class="textMsg" [(ngModel)]="userPwd" name="userPwd" clearInput></ion-input>
+        </ion-item>
+        <div>
+            <button ion-button small clear outline class="registerBtn" (click)="register()">注册</button>
+            <button ion-button small clear outline class="pwdBtn" (click)="toResetPwd()">忘记密码？
+            </button>
+        </div>
+        <div style="padding-top: 30px">
+            <button class="fullBtn" (click)="login()" [disabled]="!userPhone || !userPwd">登录</button>
+        </div>
+
+        <!--<button ion-button block (click)="login()" [disabled]="!userPhone || !userPwd" class="bigBtn">-->
+        <!--登录-->
+        <!--</button>-->
+    </form>
+</ion-content>
+
+
+

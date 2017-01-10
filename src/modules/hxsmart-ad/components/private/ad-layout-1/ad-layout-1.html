@@ -1,0 +1,11 @@
+<ion-list class="adLayout1" (click)="goToDetail(adData[0].advert.advertId)">
+    <ion-item>
+        <ion-thumbnail item-left>
+            <img [attr.src]="imgSrc + adData[0].advert.smallPic"/>
+        </ion-thumbnail>
+        <h2>{{adData[0].advert.titile}}</h2>
+        <p>{{adData[0].advert.subTitle}}</p>
+        <p>{{adData[0].advert.adverStartDate | date: 'y.MM.dd'}}-{{adData[0].advert.advertEndDate | date:
+            'y.MM.dd'}}</p>
+    </ion-item>
+</ion-list>

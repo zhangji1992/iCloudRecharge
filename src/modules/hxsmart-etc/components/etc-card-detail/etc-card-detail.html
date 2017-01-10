@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            我的ETC储值卡详情
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <div class="topDivide"></div>
+    <ion-list class="list">
+        <ion-item>
+            <span class="span01">持卡人：</span>
+            <span class="span02">{{navParams.get('HoldCardName') || '暂无数据'}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">车牌号：</span>
+            <span class="span02">{{navParams.get('CarNum') || '暂无数据'}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">车辆行驶证：</span>
+            <span class="span02">{{navParams.get('CarDriveNum') || '暂无数据'}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">手机：</span>
+            <span class="span02">{{navParams.get('Phone') || '暂无数据'}}</span>
+        </ion-item>
+        <ion-item>
+            <span class="span01">卡号：</span>
+            <span class="span02">{{navParams.get('ETCCardNo') || '暂无数据'}}</span>
+        </ion-item>
+    </ion-list>
+    <button class="fullBtn" (click)="unBind()">解除绑定</button>
+</ion-content>
+

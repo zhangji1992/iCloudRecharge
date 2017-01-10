@@ -1,0 +1,19 @@
+<div class="myContent">
+    <p class="title">燃气卡</p>
+    <div class="add" (click)="addGasCard()">
+        <span>+</span>
+        <span>燃气卡</span>
+    </div>
+    <ion-list no-lines>
+        <ion-item *ngFor="let cardlist of gasCard.gasCardList">
+            <div class='compusCardEasyList' (click)='goToDetail(cardlist)'>
+                <div class="message">
+                    <p>卡号：{{cardlist.GasCardNo}}</p>
+                    <p>燃气公司：{{cardlist.SupplierName}}</p>
+                    <p>绑定时间：{{cardlist.Fromdate}}</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>
+

@@ -1,0 +1,13 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>电子账户绑定成功</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="3" [stepCon]="['实名信息','改签银行卡','完成']"></tool-steps>
+    <div class="wrap" text-center>
+        <div class="img"><img src="assets/compus/suc.png" alt=""></div>
+        <div class="word1">尊敬的：{{navParams.get('name')}}</div>
+        <div class="word2">恭喜你签约成功,3s后返回</div>
+    </div>
+</ion-content>

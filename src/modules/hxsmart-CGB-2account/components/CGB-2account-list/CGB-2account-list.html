@@ -1,0 +1,125 @@
+<!--<div style="border: 1px solid;margin: 15px 10px 5px;border-radius: 3px" *ngFor="let account of cardObj;let index1= index" >-->
+<!--<ion-item style="padding-left: 20px;" (click)="showDetail(account)">-->
+<!--<p style="float: right">余额：{{account.balance}}</p>-->
+<!--<ion-avatar item-left>-->
+<!--<img src="assets/pay-method-list/bank.png">-->
+<!--</ion-avatar>-->
+<!--<h2>广发银行||类账户号</h2>-->
+<!--<p>账户号：{{account.number | noHideFooter}}</p>-->
+<!--</ion-item>-->
+<!--<ion-row style="border-top: 1px solid;">-->
+<!--<ion-col>-->
+<!--<button small ion-button full style="" (click)="cash(account)">提现</button>-->
+<!--</ion-col>-->
+<!--<ion-col>-->
+<!--<button small ion-button full  style="" (click)="pay(account)">充值</button>-->
+<!--</ion-col>-->
+<!--<ion-col>-->
+<!--<button small ion-button full  style="" (click)="changeCard(account,index1)">改签银行卡</button>-->
+<!--</ion-col>-->
+<!--</ion-row>-->
+<!--</div>-->
+<!--<div *ngFor="let account of cardObj;let index1= index">
+    <ion-list no-lines
+              style="margin: 1em; border-radius: 0.3em;border: 1px solid #259D89;font-family: 'Microsoft YaHei';">
+        <div (click)="onOff(name)">
+            <ion-item
+                    style="background: linear-gradient(to right,#07AC91, #1CBEEC);color: white;margin:0;padding: 0;">
+                <button ion-button outline clear #name
+                        style="position: absolute;top: 0; right: 0;margin: 0;padding :1.2em 0.8em 1.2em 1em;color: #757576;background-color: white;border-radius :0;border-top-right-radius: 0.3em;border-bottom-left-radius: 0.3em;font-size: 1.5rem;">
+                    余额：<i *ngIf="name.innerHTML">{{account.balance}}</i>
+                    <i *ngIf="!name.innerHTML">**.**</i>
+                    <ion-icon *ngIf="name.innerHTML" name="ios-eye-outline"
+                              style="padding-left: 0.5em;font-size: 2em"></ion-icon>
+                    <ion-icon *ngIf="!name.innerHTML" name="ios-eye-off-outline"
+                              style="padding-left: 0.5em;font-size: 2em"></ion-icon>
+                </button>
+            </ion-item>
+        </div>
+        <ion-item
+                style="background: linear-gradient(to right,#07AC91, #1CBEEC);color: white;padding-left: 2em;margin-top: -0.5em;margin-bottom: 2px;"
+                (click)="showDetail(account)">
+            <ion-avatar item-left
+                        style="background-color: white;border-radius: 20px;border: 1px solid rgba(68, 202, 178, 0.5)">
+                <img style="width: 38px;height: 38px" src="assets/pay-method-list/bank.png">
+            </ion-avatar>
+            <h2 style="font-size: 1.2em">广发银行Ⅱ类账户</h2>
+        </ion-item>
+        <ion-item
+                style="background: linear-gradient(to right,#07AC91, #1CBEEC);color: white;padding-left: 2em;margin-top: -0.8em;"
+                (click)="showDetail(account)">
+            账户号：{{account.number | transHeadBody}}
+        </ion-item>
+        <ion-row text-center style="background-color: white;border-bottom-left-radius: 0.3em;
+border-bottom-right-radius: 0.3em;">
+            <ion-col style="padding: 0">
+                <button ion-button clear full style="color:#008D76;margin: 0;font-size: 1.1em;"
+                        (click)="cash(account,index1)">提现
+                </button>
+            </ion-col>
+            <span
+                    style="width: 2px; height: 16px;border-right: 1.55px solid #06C4A3;display: inline-block;margin: auto"></span>
+            <ion-col style="padding: 0">
+                <button ion-button clear full style="color:#008D76;margin: 0;font-size: 1.1em;"
+                        (click)="pay(account,index1)">充值
+                </button>
+            </ion-col>
+            <span *ngIf="!account.bankCard.number"
+                  style="width: 2px;height: 16px;border-right: 1.55px solid #06C4A3;display: inline-block;margin: auto"></span>
+            <ion-col style="padding: 0">
+                <button *ngIf="!account.bankCard.number" ion-button clear full style="color:#757576;margin: 0"
+                        (click)="changeCard(account,index1)">签约银行卡
+                </button>
+            </ion-col>
+            &lt;!&ndash;<ion-col>&ndash;&gt;
+            &lt;!&ndash;<button (click)="cancelBankCard({partyId:user.getUserInfo().id,opAccount:account.bankCard.number,vAccountNo:account.number})">&ndash;&gt;
+            &lt;!&ndash;解签&ndash;&gt;
+            &lt;!&ndash;</button>&ndash;&gt;
+            &lt;!&ndash;</ion-col>&ndash;&gt;
+        </ion-row>
+    </ion-list>
+</div>-->
+
+
+<div padding>
+    <div class="account-content" *ngFor="let account of cardObj;let index1= index" (click)="showDetail(account)">
+        <div class="header" text-left>
+            <div class="balance-info" (click)="onOff(balanceEle,$event,account.balance)">
+                余额：
+                <span #balanceEle text-nowrap="" data-flag="false">**.**</span>
+                <ion-icon *ngIf="balanceEle.dataset.flag=='true'" name="ios-eye-outline" class="balance-toggle-btn">
+                </ion-icon>
+                <ion-icon *ngIf="balanceEle.dataset.flag=='false'" name="ios-eye-off-outline"
+                          class="balance-toggle-btn"></ion-icon>
+            </div>
+        </div>
+        <div class="content-center">
+            <div class="bankInfo">
+                <i class="iconfont icon-guangfayinhang bank-logo"></i>
+                <span class="accountType">广发银行Ⅱ类账户</span>
+            </div>
+            <div class="accountNum">
+                <span>账户号：</span>
+                <span>{{account.number | transHeadBody}}</span>
+            </div>
+        </div>
+        <div class="content-bottom" (click)="$event.stopPropagation()">
+            <div class="btn-col">
+                <button ion-button small clear (click)="cash(account,index,$event)" class="btn-font-color">
+                    提现
+                </button>
+            </div>
+
+            <span class="btn-gap"></span>
+            <div class="btn-col">
+                <button ion-button small clear (click)="pay(account,index,$event)" class="btn-font-color">充值</button>
+            </div>
+            <span class="btn-gap" *ngIf="!account.bankCard.number"></span>
+            <div class="btn-col" *ngIf="!account.bankCard.number">
+                <button ion-button small clear (click)="changeCard(account,index,$event)" class="btn-font-color">
+                    签约银行卡
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

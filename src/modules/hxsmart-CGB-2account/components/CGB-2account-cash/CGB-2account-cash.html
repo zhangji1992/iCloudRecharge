@@ -1,0 +1,42 @@
+<tool-steps [stepNow]="1" [stepCon]="['提现','提现详情','完成']"></tool-steps>
+<ion-list no-lines>
+    <ion-list-header style="margin: 0;
+    border: none;
+padding-top: 0.4em;
+min-height: 2.5em;
+height: 2.5em;">
+        资金来源
+    </ion-list-header>
+    <ion-item style="background-color: white">
+        <ion-label>广发银行Ⅱ类账户(尾号{{info.number | footer}})<span style="float: right">余额:<i
+            style="color: #DC650D;font-style: normal;">{{info.balance}}元</i></span></ion-label>
+    </ion-item>
+    <ion-item style="background-color: white;margin-top: 1px">
+        <ion-label style="color: black">提现金额</ion-label>
+        <ion-input [(ngModel)]="myValue" type="number"></ion-input>
+    </ion-item>
+</ion-list>
+<button ion-button small clear outline
+        style="float: left;margin-top: -1em;color: #FF0000;text-decoration: underline;margin-bottom: 2em;">到账时间，手续费说明
+</button>
+<button ion-button small clear outline
+        style="float: right;margin-top: -1em;color: #FF0000;text-decoration: underline;margin-bottom: 2em;"
+        (click)="cashAll()">全部提现
+</button>
+<ion-list>
+    <ion-list-header style="margin: 0;
+    border: none;
+padding-top: 0.4em;
+min-height: 2.5em;
+height: 2.5em;">
+        到账银行
+    </ion-list-header>
+    <ion-item style="background-color: white;color: black">
+        <ion-label>xx银行储蓄卡</ion-label>
+        <ion-input [value]="info.bankCard.number | transBody" disabled></ion-input>
+    </ion-item>
+</ion-list>
+<button class="fullBtn" (click)="goCashDetail()" [disabled]="!myValue">确定</button>
+
+
+

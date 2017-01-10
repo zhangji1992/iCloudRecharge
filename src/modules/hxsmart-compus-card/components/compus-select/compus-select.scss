@@ -1,0 +1,42 @@
+compus-select {
+    ion-buttons {
+        width: 15%;
+        position: absolute;
+        right: 20px;
+        top: 6px;
+
+        .bar-button-md:first-child {
+            margin-top: 4px;
+            font-size: 16px;
+        }
+    }
+    .searchbar-ios {
+        margin: 5px 0px;
+        border: none;
+        background: none;
+        height: 56px;
+    }
+    .searchbar-md .searchbar-search-icon {
+        width: 24px;
+        height: 24px;
+        background-size: 24px;
+        top: 14px;
+    }
+    .searchbar-ios .searchbar-search-icon {
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+        top: 15px;
+    }
+    .searchbar-ios.searchbar-left-aligned .searchbar-input {
+        height: 4rem;
+        font-size: 1.6rem;
+        padding-left: 40px;
+    }
+    .item {
+        background-color: #fff !important;
+    }
+    .searchbar .searchbar-input {
+        box-shadow: none;
+    }
+}

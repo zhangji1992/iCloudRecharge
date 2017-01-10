@@ -1,0 +1,83 @@
+user-set-pay-pwd {
+
+}
+
+user-set-pay-pwd .setPayPad .scroll-content {
+    overflow-y: auto;
+}
+
+user-set-pay-pwd .setPayPad {
+    background-color: #F0F0F0;
+}
+
+user-set-pay-pwd .setPayPad ion-item {
+    background-color: #FFFFFF;
+    height: 56px;
+}
+
+user-set-pay-pwd .bigBtn {
+    color: white;
+    background-color: #2A84C3;
+    margin: 15px auto;
+    width: 94%;
+    margin-top: 115px;
+}
+
+user-set-pay-pwd .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #292929;
+}
+
+user-set-pay-pwd .list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block {
+    border-top: 1px solid #e6e6e6;
+}
+
+user-set-pay-pwd .list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+user-set-pay-pwd .header-md:after {
+    border-top: 1px solid #DDDDDD;
+}
+
+user-set-pay-pwd .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pay-pwd .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pay-pwd .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pay-pwd .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pay-pwd .item-md {
+    padding-right: 6px;
+    padding-left: 8px;
+}
+
+user-set-pay-pwd .label-md {
+    margin: 13px 8px 13px 9px;
+}
+
+user-set-pay-pwd .item-md [item-left], .item-md [item-right] {
+    margin: 9px -3px 9px 0;
+}
+
+user-set-pay-pwd .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #000000;
+    font-size: 16px;
+}
+
+user-set-pay-pwd .text-input-md {
+    margin: 13px 8px 13px 6px;
+    font-size: 16px;
+}

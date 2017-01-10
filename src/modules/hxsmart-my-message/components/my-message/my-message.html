@@ -1,0 +1,52 @@
+<!--<ion-header>-->
+<!--<ion-navbar no-border>-->
+<!--<ion-title>-->
+<!--我的消息-->
+<!--</ion-title>-->
+<!--<ion-buttons right>-->
+<!--<button ion-button (click)="clear()" *ngIf="message.storageMessages.length">-->
+<!--清空-->
+<!--</button>-->
+<!--</ion-buttons>-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>我的消息</ion-title>
+        <ion-buttons right>
+            <button ion-button (click)="clear()" *ngIf="message.storageMessages.length">清空
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="下拉刷新"
+            refreshingSpinner="bubbles"
+            refreshingText="更新中...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <ion-list>
+        <div class="messageList" *ngFor="let message of message.storageMessages">
+            <div class="leftPart">
+                <div class="messageBG" item-left>
+                    <ion-icon name="person"></ion-icon>
+                </div>
+            </div>
+            <div class="rightPart">
+                <div>{{message.createTime}} {{message.content}}</div>
+            </div>
+        </div>
+    </ion-list>
+
+</ion-content>

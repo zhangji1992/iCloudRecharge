@@ -1,0 +1,26 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            校园卡充值
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="2" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+    <div class="detWrap">
+        <div class="head"></div>
+        <div class="con">
+            <div class="contentD">
+                <div class="title">充值详情</div>
+                <div class="conItem">姓名：{{compusCardObj.HoldClientNname}}</div>
+                <div class="conItem">学校：{{compusCardObj.SupplierName}}</div>
+                <div class="conItem">卡号：{{compusCardObj.CardNo}}</div>
+                <div class="conItem conItemC">充值金额：{{compusCardObj.chargeNum}}</div>
+                <div class="conItem" *ngIf="compusCardObj.chargeWay!=''">支付方式：{{compusCardObj.chargeWay}}</div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+    <div class="myDefFullBtn" (click)="goNext()">确定</div>
+</ion-content>

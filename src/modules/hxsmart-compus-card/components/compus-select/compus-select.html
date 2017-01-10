@@ -1,0 +1,32 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            选择学校
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="close()">
+                关闭
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!--<div class="searchDiv">-->
+    <!--<div><ion-icon name="search"></ion-icon></div>-->
+    <!--<input type="text" placeholder="请输入学校关键词">-->
+    <!--</div>-->
+    <!--<div *ngFor="let item of items" (tap)="selectChange(item,ev)" class="mySelect">-->
+    <!--<div>-->
+    <!--<div>item.supplierName</div><div> <ion-icon name="checkmark-circle"></ion-icon></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <ion-searchbar (ionInput)="getItems($event)" [(ngModel)]="searchCompus" placeholder="请输入学校关键词"></ion-searchbar>
+    <ion-list radio-group class="mySelect">
+        <ion-item *ngFor="let item of items" (tap)="selectChange(item,ev)">
+            <ion-label>{{ item.supplierName }}</ion-label>
+            <ion-radio value="{{ item.supplierName }}"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <button class="myDefFullBtn" (click)="confirm()" [disabled]="confirmBol">确定</button>
+</ion-content>

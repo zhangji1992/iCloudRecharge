@@ -1,0 +1,89 @@
+compus-card {
+    ul, li {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .wrap {
+        padding: 20px;
+        margin-top: 20px;
+        .ulWrap {
+            margin-bottom: 15px;
+            background: #fff;
+            .imgWrap {
+                img {
+                    width: 100%;
+                }
+            }
+            .wordWrap {
+                overflow: hidden;
+                .lineWrap {
+                    float: left;
+                    height: 30px;
+                    width: 40%;
+                    position: relative;
+                    .lineLeft {
+                        height: 1px;
+                        width: 60%;
+                        position: absolute;
+                        right: 0px;
+                        top: 14px;
+                    }
+                    .dotLeft {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 4px;
+                        position: absolute;
+                        right: 0px;
+                        top: 10px;
+                    }
+                    .lineRight {
+                        height: 1px;
+                        width: 60%;
+                        position: absolute;
+                        left: 0px;
+                        top: 14px;
+                    }
+                    .dotRight {
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 4px;
+                        position: absolute;
+                        left: 0px;
+                        top: 10px;
+                    }
+                }
+                .word {
+                    float: left;
+                    height: 30px;
+                    width: 20%;
+                    text-align: center;
+                    color: #292c29;
+                    line-height: 30px;
+                    font-size: 18px;
+                }
+            }
+            .color1 {
+                .lineWrap {
+                    div {
+                        background-color: #fa6f6b;
+                    }
+                }
+            }
+            .color2 {
+                .lineWrap {
+                    div {
+                        background-color: #6db8fe;
+                    }
+                }
+            }
+            .color3 {
+                .lineWrap {
+                    div {
+                        background-color: #07B84E;
+                    }
+                }
+            }
+        }
+    }
+}

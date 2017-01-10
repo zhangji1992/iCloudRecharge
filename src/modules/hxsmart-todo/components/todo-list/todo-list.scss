@@ -1,0 +1,65 @@
+todo-list {
+
+}
+
+todo-list .todoContent {
+    background-color: #f0f0f0;
+}
+
+todo-list .todoContent .scroll-content {
+    overflow-y: auto;
+}
+
+todo-list .todoContent .listItem {
+    background-color: #ffffff;
+    margin: 1.5rem auto 1rem;
+}
+
+todo-list .todoContent .listImg {
+    float: left;
+    padding: 1rem;
+}
+
+todo-list .todoContent .listData {
+    overflow: hidden;
+}
+
+todo-list .todoContent .listTip {
+    color: #000000;
+    margin: 1rem auto;
+    font-size: 18px;
+}
+
+todo-list .todoContent .listBtn {
+    font-size: 15px;
+    background-color: #fff;
+    color: #ff0000;
+    margin-right: 0.5em;
+    text-decoration: underline;
+}
+
+todo-list .todoContent .listTime {
+    color: #696969;
+}
+
+todo-list .todoContent .listStatus {
+    float: right;
+    margin-right: 5%;
+    color: #ff0000;
+}
+
+todo-list .todoContent .phoneBtn {
+    color: #FF0000;
+}
+
+.todo-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 0, 0, 0.76);
+    display: inline-block;
+    line-height: 40px;
+    font-size: 21px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}

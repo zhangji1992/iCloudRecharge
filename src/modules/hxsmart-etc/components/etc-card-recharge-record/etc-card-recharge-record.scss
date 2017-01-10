@@ -1,0 +1,90 @@
+etc-card-recharge-record {
+    ion-content {
+        background-color: #efefef !important;
+
+        ion-item {
+            background-color: #ffffff;
+            margin-top: 12px !important;
+            position: relative !important;
+        }
+
+        .item-inner {
+            border-bottom: none !important;
+        }
+
+        .chargeIMg {
+            position: absolute;
+            top: 48px;
+            left: 18px;
+            width: 10px;
+            height: 40px;
+        }
+
+        .chargeIMg span {
+            display: block;
+        }
+
+        .chargeIMg :nth-child(1) {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            border: 1px solid #28a9e5;
+            font-size: 10px;
+            line-height: 16px;
+            text-indent: -2px;
+            color: #28a9e5;
+        }
+
+        .chargeIMg :nth-child(2) {
+            width: 1px;
+            height: 20px;
+            background-color: #28a9e5;
+            margin-left: 4px;
+        }
+
+        .chargeIMg :nth-child(3) {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            border: 1px solid #28a9e5;
+            font-size: 10px;
+            line-height: 16px;
+            text-indent: -2px;
+            color: #28a9e5;
+        }
+
+        .MyTitle {
+            height: 125px;
+            text-align: center;
+            background-color: #29A9E6;
+        }
+
+        .MyTitle p {
+            position: absolute;
+            width: 100%;
+            top: 35px;
+            text-align: center;
+            font-size: 25px;
+            z-index: 3;
+        }
+
+        .MyTitle img {
+            padding-top: 40px;
+            width: 90%;
+            height: 120px;
+        }
+
+        .marginTop {
+            margin-top: 10px;
+            margin-left: 16px;
+        }
+
+        .marginTop button {
+            height: 25px;
+            background-color: #28a9e5;
+            color: #ffffff;
+            border-radius: 3px;
+        }
+    }
+}
+

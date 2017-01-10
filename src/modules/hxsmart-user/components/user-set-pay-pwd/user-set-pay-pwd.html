@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>设置支付密码</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="setPayPad">
+    <ion-list style="margin-top: 18px;">
+        <ion-item>
+            <ion-label>设置支付密码:</ion-label>
+            <ion-input type="password" placeholder="请输入密码" [(ngModel)]="pwdFlag1" (focus)="iptPayPwd()"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>确认设置支付密码:</ion-label>
+            <ion-input type="password" placeholder="请再次输入密码" [(ngModel)]="pwdFlag2" (focus)="reIptPayPwd()"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div style="padding-top: 30px;">
+        <button class="fullBtn" (click)="setPayPwd()" [disabled]="!payPwd || !rePayPwd">确定</button>
+    </div>
+    <!--<button ion-button block [disabled]="!payPwd || !rePayPwd" class="bigBtn" (click)="setPayPwd()">确定</button>-->
+</ion-content>

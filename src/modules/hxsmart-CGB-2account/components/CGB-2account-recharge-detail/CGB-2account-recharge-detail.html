@@ -1,0 +1,27 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>Ⅱ类账户充值</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="2" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+    <!--<div class="tip">-->
+    <!--<div class="tipContent1">-->
+    <!--<h2>充值详情</h2>-->
+    <!--<div class="tipCard">xx银行储蓄卡：{{navParams.get('account').bankCard.number | transHeadBody}}</div>-->
+    <!--<div class="tipValue">充值金额：{{navParams.get('value')}}元</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="detWrap">
+        <div class="head"></div>
+        <div class="con">
+            <div class="contentD">
+                <div class="title">充值详情</div>
+                <div class="conItem">广发银行储蓄卡：{{navParams.get('account').bankCard.number | transHeadBody}}</div>
+                <div class="conItem conItemC">充值金额：{{navParams.get('value')}}元</div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+    <button class="fullBtn" (click)="recharge()">支付</button>
+</ion-content>

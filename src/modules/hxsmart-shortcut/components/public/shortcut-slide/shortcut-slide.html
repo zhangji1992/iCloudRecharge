@@ -1,0 +1,84 @@
+<div class="parent">
+
+    <!--exist localStorage-->
+    <div *ngIf="shortcut.items.length">
+        <!--sliderBox-->
+        <ion-slides #mySlider [options]="slideOptions" class="slidesCss"
+                    (ionDidChange)="onSlideChanged()">
+
+            <ion-slide *ngFor="let each of shortcut.items">
+
+                <ion-row class="shortcut-lineCss">
+
+                    <ion-col width-33 class="slideContent"
+                             *ngFor="let item of each.slice(0,each.length);let i = index" (click)="redirect(item)">
+                        <div class="circle" [style.background-color]="item.color">
+                            <ion-icon class="contentIcon" [name]="item.icon"></ion-icon>
+                        </div>
+                        <div class="contentText">{{item.txt}}</div>
+                    </ion-col>
+
+                    <ion-col width-33 class="slideContent" *ngIf="each.length <= 8"
+                             (click)="more()">
+                        <div class="circle addMore">
+                            <ion-icon class="contentIcon" name="add"></ion-icon>
+                        </div>
+                        <div class="contentText">更多</div>
+                    </ion-col>
+
+                </ion-row>
+
+            </ion-slide>
+
+            <ion-slide *ngIf="shortcut.items[shortcut.items.length-1].length == 9">
+                <ion-row class="shortcut-lineCss">
+                    <ion-col width-33 class="slideContent" (click)="more()">
+                        <div class="circle addMore">
+                            <ion-icon class="contentIcon" name="add"></ion-icon>
+                        </div>
+                        <div class="contentText">更多</div>
+                    </ion-col>
+                </ion-row>
+            </ion-slide>
+
+        </ion-slides>
+
+        <!--paper-->
+        <div class="slidePage">
+            <span *ngFor="let each of shortcut.items; let i = index" class="slideIcon"
+                  [ngClass]="{slideActive: this.slideIndex == i || shortcut.items.length == 0}">
+            </span>
+            <span class="slideIcon slideIconAdd"
+                  [ngClass]="{slideActive: this.slideIndex == shortcut.items.length}"
+                  *ngIf="shortcut.items[shortcut.items.length-1].length == 9">
+            </span>
+        </div>
+    </div>
+
+    <!--no localStorage-->
+    <div *ngIf="!shortcut.items.length">
+        <!--sliderBox-->
+        <ion-slides [options]="slideOptions" class="slidesCss">
+            <ion-slide>
+                <ion-row class="shortcut-lineCss">
+                    <ion-col width-33 class="slideContent" (click)="more()">
+                        <div class="circle addMore">
+                            <ion-icon class="contentIcon" name="add"></ion-icon>
+                        </div>
+                        <div class="contentText">更多</div>
+                    </ion-col>
+                </ion-row>
+            </ion-slide>
+        </ion-slides>
+        <!--pager-->
+        <div class="slidePage">
+            <span class="slideIcon slideActive"></span>
+        </div>
+    </div>
+
+</div>
+
+<!--测试指令，可删除-->
+<!--<div>-->
+<!--<img [imgSrc]="'img.txt'">-->
+<!--</div>-->

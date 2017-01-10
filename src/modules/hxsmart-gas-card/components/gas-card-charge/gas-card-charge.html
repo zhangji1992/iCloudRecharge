@@ -1,0 +1,73 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            燃气卡充值
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="1" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+    <div class="infoWrap">
+        <div class="wrap bottomLine">
+            <div class="left">
+                <span>卡号：</span>
+                <span>{{this.navParam.data.GasCardNo}}</span>
+            </div>
+            <div class="right cardNo">
+                <button (click)="searchStepPrice()">查询阶梯价格</button>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="left">
+                <span>单位名称：</span>
+                <span>{{this.navParam.data.SupplierName}}</span>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="left">
+                <span>开通时间：</span>
+                <span>{{this.navParam.data.Fromdate}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="myTable">
+        <p>当前阶梯价格</p>
+        <table>
+            <thead>
+            <tr>
+                <td>阶梯级数</td>
+                <td>总量(方)</td>
+                <td>单价(元/方)</td>
+                <td>已买(方)</td>
+                <td>可买(方)</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cardlist of this.gasCard.gasPriceStep;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{cardlist.total}}</td>
+                <td>{{cardlist.unitPrice}}</td>
+                <td>{{cardlist.provided}}</td>
+                <td>{{cardlist.provide}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="buyGasNum">
+            <span>购气量：</span>
+            <p>
+                <input type="text" placeholder="点击输入" class="num" #box (keyup)="keyInput(box.value)">
+                <span>方</span>
+            </p>
+        </div>
+    </div>
+    <div class="payWay">
+        支付方式
+    </div>
+    <gas-card-paylist></gas-card-paylist>
+</ion-content>
+<ion-footer>
+    <div class="subBtnWrap">
+        <div class="subRight" (click)="goNext()">确定</div>
+    </div>
+</ion-footer>

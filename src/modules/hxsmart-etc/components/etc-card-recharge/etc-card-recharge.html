@@ -1,0 +1,200 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>ETC储值卡充值</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!--hasNFC-->
+    <div *ngIf="navParams.get('hasNFC')">
+        <tool-steps [stepNow]="stepNow" [stepCon]="['读卡','充值','写卡','完成']"></tool-steps>
+
+        <!--stepNow == 1-->
+        <div *ngIf="stepNow == 1">
+            <etc-card-recharge-animate></etc-card-recharge-animate>
+            <button ion-button full (click)="goNext(stepNow)">下一步</button>
+        </div>
+
+        <!--stepNow == 2-->
+        <div *ngIf="stepNow == 2">
+
+            <div class="infoWrap">
+                <div class="wrap">
+                    <div class="left">卡号</div>
+                    <div class="right big">{{navParams.get('ETCCardNo') || '暂无数据'}}</div>
+                </div>
+                <div class="wrap">
+                    <div class="left">持卡人</div>
+                    <div class="right">{{navParams.get('HoldCardName') || '暂无数据'}}</div>
+                </div>
+                <div class="wrap">
+                    <div class="left">余额</div>
+                    <div class="right">{{cardBalance || '读取中。。。'}}</div>
+                </div>
+                <div class="wrap">
+                    <div class="left">车牌号</div>
+                    <div class="right">{{navParams.get('CarNum') || '暂无数据'}}</div>
+                </div>
+            </div>
+
+            <div class="chooseMountWrap">
+                <div class="chargeMount">
+                    <span>充值金额</span>
+                    <input clearInput type="number" [ngClass]="{placeHolder: !rechargeNum, normal: rechargeNum}"
+                           placeholder="建议输入整数"
+                           [(ngModel)]="rechargeNum">元
+                </div>
+                <div class="chooseMount">
+                    <div [ngClass]="{active: rechargeNum == 100}" (click)="rechargeNum = 100">100元</div>
+                    <div [ngClass]="{active: rechargeNum == 200}" (click)="rechargeNum = 200">200元</div>
+                    <div [ngClass]="{active: rechargeNum == 500}" (click)="rechargeNum = 500">500元</div>
+                </div>
+            </div>
+
+            <div class="payWay">支付方式</div>
+            <etc-card-recharge-pay-channel-list></etc-card-recharge-pay-channel-list>
+        </div>
+
+        <!--stepNow == 3-->
+        <div *ngIf="stepNow == 3">
+            <etc-card-recharge-animate></etc-card-recharge-animate>
+            <button ion-button full (click)="goNext(stepNow)">下一步</button>
+        </div>
+
+        <!--stepNow == 4-->
+        <div *ngIf="stepNow == 4">
+
+            <div class="detWrap">
+                <div class="head"></div>
+                <div class="con">
+                    <div class="contentManage">
+                        <div class="title">充值详情</div>
+                        <div class="conItem">卡号：{{navParams.get('ETCCardNo') || '暂无数据'}}</div>
+                        <div class="conItem">持卡人：{{navParams.get('HoldCardName') || '暂无数据'}}</div>
+                        <div class="conItem">车牌号：{{navParams.get('CarNum') || '暂无数据'}}</div>
+                        <div class="conItem conItemC">充值后余额：{{'暂无数据'}}</div>
+                        <div class="conItem">支付方式：{{etcCard.rechargeAccount.accountTypeName}}
+                            费率:{{etcCard.rechargeAccount.feeRedix}}%
+                        </div>
+                        <div class="conItem conItemC">充值金额：{{rechargeNum}}元</div>
+                        <div class="conItem conItemC">付款金额：{{rechargeNum}}元</div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+
+            <div class="manageBtn">
+                <button ion-button class="step4btn" (click)="goNext(stepNow)">完成</button>
+                <button ion-button class="step4btn" (click)="goToRechargeRecord(navParams)">查询明细</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--NoNFC-->
+    <div *ngIf="!navParams.get('hasNFC')">
+        <tool-steps [stepNow]="stepNow" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+
+        <!--stepNow == 1-->
+        <div *ngIf="stepNow == 1">
+
+            <div class="infoWrap">
+                <div class="wrap">
+                    <div class="left">卡号</div>
+                    <div class="right big">{{navParams.get('ETCCardNo') || '暂无数据'}}</div>
+                </div>
+                <div class="wrap">
+                    <div class="left">持卡人</div>
+                    <div class="right">{{navParams.get('HoldCardName') || '暂无数据'}}</div>
+                </div>
+                <div class="wrap">
+                    <div class="left">车牌号</div>
+                    <div class="right">{{navParams.get('CarNum') || '暂无数据'}}</div>
+                </div>
+            </div>
+
+            <div class="chooseMountWrap">
+                <div class="chargeMount">
+                    <span>充值金额</span>
+                    <input clearInput type="number" [ngClass]="{placeHolder: !rechargeNum, normal: rechargeNum}"
+                           placeholder="建议输入整数"
+                           [(ngModel)]="rechargeNum">元
+                </div>
+                <div class="chooseMount">
+                    <div [ngClass]="{active: rechargeNum == 100}" (click)="rechargeNum = 100">100元</div>
+                    <div [ngClass]="{active: rechargeNum == 200}" (click)="rechargeNum = 200">200元</div>
+                    <div [ngClass]="{active: rechargeNum == 500}" (click)="rechargeNum = 500">500元</div>
+                </div>
+            </div>
+
+            <div class="payWay">支付方式</div>
+            <etc-card-recharge-pay-channel-list></etc-card-recharge-pay-channel-list>
+        </div>
+
+        <!--stepNow == 2-->
+        <div *ngIf="stepNow == 2">
+
+            <div class="detWrap">
+                <div class="head"></div>
+                <div class="con">
+                    <div class="contentManage">
+                        <div class="title">充值详情</div>
+                        <div class="conItem">卡号：{{navParams.get('ETCCardNo') || '暂无数据'}}</div>
+                        <div class="conItem">持卡人：{{navParams.get('HoldCardName') || '暂无数据'}}</div>
+                        <div class="conItem">车牌号：{{navParams.get('CarNum') || '暂无数据'}}</div>
+                        <div class="conItem conItemC">充值后余额：{{'暂无数据'}}</div>
+                        <div class="conItem">支付方式：{{etcCard.rechargeAccount.accountTypeName}}
+                            费率:{{etcCard.rechargeAccount.feeRedix}}%
+                        </div>
+                        <div class="conItem conItemC">充值金额：{{rechargeNum}}元</div>
+                        <div class="conItem conItemC">付款金额：{{rechargeNum}}元</div>
+                    </div>
+                    <div class="footer"></div>
+                </div>
+            </div>
+
+            <div class="manageBtn">
+                <button class="fullBtn" (click)="goNext(stepNow)">立即充值</button>
+            </div>
+
+        </div>
+
+        <!--stepNow == 3-->
+        <div *ngIf="stepNow == 3">
+
+            <div class="wrap3">
+                <div class="img"><img src="assets/compus/suc.png" alt=""></div>
+                <div class="word1">支付成功</div>
+                <ul class="tip3">
+                    <li>温馨提示：</li>
+                    <li>您已完成线上支付，请速到附近充值点写卡以完成燃气充值业务。</li>
+                    <li>待写卡金额：{{rechargeNum}}元</li>
+                </ul>
+            </div>
+
+            <div class="manageBtn">
+                <button ion-button class="step4btn" (click)="goNext(stepNow)">完成</button>
+                <button ion-button class="step4btn" (click)="goToRechargeRecord(navParams)">查询明细</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</ion-content>
+<ion-footer *ngIf="(navParams.get('hasNFC') && stepNow == 2) || (!navParams.get('hasNFC') && stepNow == 1)">
+    <div class="subBtnWrap">
+        <div class="subLeft">
+            <span class="sp1">应付：</span>
+            <span class="sp2">￥{{rechargeNum}}</span>
+        </div>
+        <div class="subRight" (click)="goNext(stepNow)">确定</div>
+    </div>
+</ion-footer>

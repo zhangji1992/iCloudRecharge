@@ -1,0 +1,92 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>待办事项</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="todoContent">
+    <div *ngIf="todoService.todoObject.showPayPwd"><!--是否显示设置密码待办事项-->
+        <div class="listItem">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">您未设置支付密码,请及时设置</p>
+                <button class="listBtn" (click)="setPayPwd()">设置</button>
+                <p class="listTime">{{todoService.todoObject.payPwdTime}}<span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showBindEmail"><!--是否显示绑定邮箱待办事项-->
+        <div class="listItem">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">您未绑定邮箱,请及时设置</p>
+                <button class="listBtn" (click)="setEmail()">设置</button>
+                <p class="listTime">{{todoService.todoObject.bindEmailTime}}<span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showGasCard">
+        <div class="listItem" *ngFor="let gasCard of todoService.todoObject.gasCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{gasCard.content}}</p>
+                <button class="listBtn" (click)="searchAround()">附近充值点查询</button>
+                <button class="listBtn" (click)="retrunGasMoney()">退款</button>
+                <p class="listTime">{{gasCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showWriteGasCard">
+        <div class="listItem" *ngFor="let writeGasCard of todoService.todoObject.writeGasCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{writeGasCard.content}}</p>
+                <button class="listBtn" (click)="searchAround()">附近充值点查询</button>
+                <button class="listBtn" (click)="retrunGasMoney()">退款</button>
+                <button class="listBtn"><a class="phoneBtn" href="tel:13387567238">联系客服</a></button>
+                <p class="listTime">{{writeGasCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showSchoolCard">
+        <div class="listItem" *ngFor="let schoolCard of todoService.todoObject.schoolCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{schoolCard.content}}</p>
+                <button class="listBtn" (click)="retrunSchoolMoney()">退款</button>
+                <p class="listTime">{{schoolCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showWriteSchoolCard">
+        <div class="listItem" *ngFor="let writeSchoolCard of todoService.todoObject.writeSchoolCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{writeSchoolCard.content}}</p>
+                <button class="listBtn" (click)="retrunSchoolMoney()">退款</button>
+                <button class="listBtn"><a class="phoneBtn" href="tel:13387567238">联系客服</a></button>
+                <p class="listTime">{{writeSchoolCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showETCCard">
+        <div class="listItem" *ngFor="let ETCCard of todoService.todoObject.ETCCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{ETCCard.content}}</p>
+                <button class="listBtn" (click)="retrunETCMoney()">退款</button>
+                <p class="listTime">{{ETCCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="todoService.todoObject.showWriteETCCard">
+        <div class="listItem" *ngFor="let writeETCCard of todoService.todoObject.writeETCCardList">
+            <span class="listImg"><i class="iconfont icon-ren todo-icon"></i></span>
+            <div class="listData">
+                <p class="listTip">{{writeETCCard.content}}</p>
+                <button class="listBtn" (click)="retrunETCMoney()">退款</button>
+                <button class="listBtn"><a class="phoneBtn" href="tel:13387567238">联系客服</a></button>
+                <p class="listTime">{{writeETCCard.noteDate}}<span span class="listStatus">待处理</span></p>
+            </div>
+        </div>
+    </div>
+</ion-content>

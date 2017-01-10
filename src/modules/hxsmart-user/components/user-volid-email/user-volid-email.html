@@ -1,0 +1,29 @@
+<div class="verifyEmailContent">
+    <ion-list class="email-list">
+        <div class="listItem">
+            <label class="emailLbl">邮箱：</label>
+            <input type="email" required [(ngModel)]="email" [readonly]="emailIpt" placeholder="邮箱地址">
+            <button type="button" (click)="sendCode()" [disabled]="sDisabled">发送验证码</button>
+        </div>
+        <div class="rowLine"></div>
+        <div class="item-down">
+            <label class="codeLbl">验证码：</label>
+            <input class="verify" type="text" placeholder="验证码" [(ngModel)]="confirmCode">
+        </div>
+    </ion-list>
+    <div *ngIf="chgOpt" class="isShowChg">
+        <div class="chgOpt">
+            <button type="button" (click)="switchMobile()">切换手机</button>
+        </div>
+    </div>
+    <div text-center *ngIf="tStatus">
+        <p class="verifyLimit">{{nums}}秒后重新获取</p>
+    </div>
+    <div style="height: 50px;"></div>
+    <button class="fullBtn" (click)="nextStep()" [disabled]="!email || !confirmCode || !sDisabled">{{nextStepInput}}
+    </button>
+    <!--<div padding class="btnDiv">-->
+    <!--<button ion-button  block (click)="nextStep()" class="bigBtn" [disabled]="!email || !confirmCode || !sDisabled">{{nextStepInput}}</button>-->
+    <!--</div>-->
+</div>
+

@@ -1,0 +1,74 @@
+user-modify-pwd .modifyPwd {
+    background-color: #F0F0F0;
+    font-size: 16px;
+}
+
+user-modify-pwd .modifyPwd .scroll-content {
+    overflow-y: auto;
+}
+
+user-modify-pwd .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #292929;
+}
+
+user-modify-pwd .list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block {
+    border-top: 0px solid #dedede;
+}
+
+user-modify-pwd .list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block {
+    border-bottom: 0px solid #dedede;
+}
+
+user-modify-pwd .modifyPwd ion-item {
+    background-color: #FFFFFF;
+    height: 56px;
+}
+
+user-modify-pwd .item-md {
+    padding-right: 6px;
+    padding-left: 8px;
+}
+
+user-modify-pwd .label-md {
+    margin: 13px 8px 13px 20px;
+}
+
+user-modify-pwd .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #000000;
+    font-size: 16px;
+}
+
+user-modify-pwd .header-md:after {
+    border-top: 1px solid #DDDDDD;
+}
+
+user-modify-pwd .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-modify-pwd .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+
+}
+
+user-modify-pwd .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-modify-pwd .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-modify-pwd .text-input-md {
+    margin: 13px 8px 13px -3px;
+    font-size: 16px;
+}
+
+user-modify-pwd .btn {
+    height: 40px;
+    font-size: 20px;
+}

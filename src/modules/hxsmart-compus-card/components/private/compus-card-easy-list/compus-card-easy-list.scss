@@ -1,0 +1,59 @@
+compus-card-easy-list {
+    .myContent {
+        position: relative;
+        background-color: #ffffff;
+        margin-top: 20px;
+        min-height: 41px;
+        .add {
+            position: absolute;
+            top: 13px;
+            right: 10px;
+            z-index: 2;
+            color: #707172;
+            font-size: 16px;
+            width: 72px;
+        }
+        .title {
+            width: 60px;
+            position: absolute;
+            left: 20px;
+            top: 13px;
+            margin: 0;
+            z-index: 2;
+            color: #a2a2a2;
+            font-size: 16px;
+        }
+    }
+;
+    ion-list {
+        position: relative;
+        top: 25px;
+        .item {
+            background-color: #ffffff;
+        }
+    }
+    .compusCardEasyList {
+        border: 1px solid #4dc2f5;
+        border-radius: 8px;
+        padding: 0px 0px 10px 15px;
+        overflow: hidden;
+        position: relative;
+        background: -webkit-linear-gradient(left, #8639ba, #44cbf4); /* Safari 5.1 - 6.0 */
+        background: linear-gradient(to right, #8639ba, #44cbf4); /* 标准的语法 */
+        .message {
+            float: left;
+            margin-left: 22px;
+            p {
+                margin-top: 15px;
+                color: #ffffff;
+            }
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-top: 29px;
+        }
+    }
+}
+

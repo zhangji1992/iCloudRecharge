@@ -1,0 +1,19 @@
+<div class="itemWrap">
+    <div *ngFor="let payway of payList; let i=index">
+        <div class="item" (click)="selectWay(i)" *ngIf="i<showIndex">
+            <div class="logo"><img src="assets/pay-method-list/bank.png" alt=""></div>
+            <div class="word">{{payway.accountTypeName}}({{payway.accountNo|footer}}) 费率{{payway.rate}}%</div>
+            <div class="check" *ngIf="payway.IsDefault==1"><img src="assets/compus/select.png" alt=""></div>
+            <div class="check" *ngIf="payway.IsDefault!=1"><img src="assets/compus/unselect.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="more" *ngIf="!showBol" (click)="showList()">
+    更多支付方式
+    <ion-icon name='arrow-dropdown' color="dark"></ion-icon>
+</div>
+<div class="more" *ngIf="showBol" (click)="showList()">
+    收起
+    <ion-icon name='arrow-dropup' color="dark"></ion-icon>
+</div>
+

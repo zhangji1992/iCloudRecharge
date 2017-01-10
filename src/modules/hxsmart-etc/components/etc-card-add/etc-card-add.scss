@@ -1,0 +1,60 @@
+etc-card-add {
+    .wrap {
+        margin-top: 20px !important;
+
+        .item {
+            background-color: white !important;
+            padding-left: 0;
+
+            .label1 {
+                margin-left: 16px;
+                color: black;
+            }
+
+            .select1 {
+                position: absolute;
+                right: 5px;
+                width: 75%;
+                max-width: 100%;
+            }
+
+            .label2 {
+                margin-left: 16px;
+                margin-right: 45px;
+                color: black;
+            }
+        }
+
+        .helpBG {
+            position: relative;
+            height: 100px;
+
+            .help {
+                position: absolute;
+                right: 10px;
+                top: 0;
+                text-decoration: underline;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .wrap2 {
+        .title {
+            position: absolute;
+            top: 77px;
+            left: 18px;
+            color: #acacac;
+        }
+    }
+
+    .wrap3 {
+        .itemNormal {
+            color: #808080;
+        }
+
+        .itemStrength {
+            color: #000000;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            ETC储值卡充值明细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="下拉刷新"
+            refreshingSpinner="bubbles"
+            refreshingText="更新中...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <div class="MyTitle">
+        <p>ETC卡卡号：{{navParams.get('ETCCardNo')}}</p>
+        <img src="assets/compus/chargeDetail.png">
+    </div>
+
+    <ion-list>
+        <ion-item *ngFor="let card of etcCard.rechargeRecordsList;let i = index;"
+                  style="background-color: #ffffff;border: none;">
+            <p class="marginTop01">
+                <span>￥ 金额:</span>
+                <span>{{card.totoalAmount}}</span>
+            </p>
+            <div class="chargeIMg" *ngIf="card.orderStatus!='等待交付' && card.orderStatus!='未支付'">
+                <span>ˇ</span>
+                <span [ngStyle]="{'height': span01height}"></span>
+                <span>ˇ</span>
+            </div>
+            <div class="chargeIMg" *ngIf="card.orderStatus=='等待交付' || card.orderStatus=='未支付'">
+                <span>ˇ</span>
+                <span [ngStyle]="{'height': span02height}"></span>
+                <span>ˇ</span>
+            </div>
+            <p class="marginTop">
+                <span>充值时间:</span>
+                <span>{{card.orderDate}}</span>
+            </p>
+            <p class="marginTop">
+                <span>充值状态:</span>
+                <span *ngIf="card.orderStatus == '1'">未支付</span>
+                <span *ngIf="card.orderStatus == '2'">订单已撤销</span>
+                <span *ngIf="card.orderStatus == '3'">充值成功，待写卡</span>
+                <span *ngIf="card.orderStatus == '4'">写卡成功</span>
+                <span *ngIf="card.orderStatus == '5'">退款中</span>
+                <span *ngIf="card.orderStatus == '6'">退款完成</span>
+            </p>
+            <p class="marginTop">
+                <button *ngIf="card.orderStatus=='1'" (click)="goPay(card)">去支付</button>
+                <button *ngIf="card.orderStatus=='3'" (click)="refund(card,i)">撤销充值</button>
+            </p>
+        </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="加载更多...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>
+

@@ -1,0 +1,57 @@
+$ionicons-font-path: "../assets/fonts";
+$mlsColors: (
+    lBlue:white,
+    selectColor:#388cc6,
+    yGrey:#f8f8f8
+) !default;
+
+$toolbar-background: color($mlsColors, lBlue) !default;
+
+//navBar
+.toolbar {
+    font-family: "Microsoft YaHei";
+}
+
+//content
+.content {
+    background: #f0f0f0 !important;
+    font-family: "Microsoft YaHei";
+}
+
+//div标签内的button-css
+.myDefFullBtn {
+    display: block;
+    background-color: #2A84C3;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    width: 95%;
+    border-radius: 5px;
+    color: #fff;
+}
+
+//button标签内的button-css
+.fullBtn {
+    display: block !important;
+    border-radius: 5px !important;
+    height: 46px !important;
+    width: 95% !important;
+    font-size: 20px !important;
+    margin: 0 auto !important;
+    background-color: #2A84C3 !important;
+    color: #ffffff !important;
+}
+
+//清除refresher容器顶部border(也可设置navBar底部border)
+.scroll-content {
+    border-top: none !important;
+}
+
+//tabs
+.tabs {
+    font-family: "Microsoft YaHei";
+}

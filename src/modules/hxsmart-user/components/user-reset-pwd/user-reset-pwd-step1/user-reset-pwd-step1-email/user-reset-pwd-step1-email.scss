@@ -1,0 +1,16 @@
+user-reset-pwd-step1-email {
+    .verifyContent {
+        background-color: #f0f0f0;
+
+        .pwdTip {
+            margin-top: 1.4em;
+            margin-bottom: -1.5em;
+            margin-left: 5%;
+            color: #A2A2A2;
+        }
+    }
+}
+
+user-reset-pwd-step1-email .verifyContent .scroll-content {
+    overflow-y: auto;
+}

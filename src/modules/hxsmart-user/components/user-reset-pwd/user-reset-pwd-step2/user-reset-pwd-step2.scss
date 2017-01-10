@@ -1,0 +1,40 @@
+user-reset-pwd-step2 {
+}
+
+user-reset-pwd-step2 .setContent .scroll-content {
+    overflow-y: auto;
+}
+
+user-reset-pwd-step2 .pwdTip {
+    padding-left: 16px;
+    color: #A2A2A2;
+}
+
+user-reset-pwd-step2 .list-item .input-item {
+    background-color: #FFFFFF;
+    font-size: 16px;
+    height: 50px;
+}
+
+user-reset-pwd-step2 .list-item .input-item1 .item-inner .input-wrapper {
+    border-bottom: solid 1px #dddddd;
+}
+
+user-reset-pwd-step2 .list-item .item-word {
+    color: #000000;
+}
+
+user-reset-pwd-step2 .btn {
+    font-size: 20px;
+    height: 40px;
+}
+
+user-reset-pwd-step2 .item-md.item-input.input-has-focus .item-inner {
+    border-width: 0;
+    box-shadow: none;
+}
+
+user-reset-pwd-step2 .list-md .item-input.input-has-focus:last-child {
+    border-width: 0;
+    box-shadow: none;
+}

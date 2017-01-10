@@ -1,0 +1,22 @@
+//远程安装
+cordova plugin add
+ionic-plugin-keyboard
+cordova-plugin-whitelist
+cordova-plugin-console
+cordova-plugin-statusbar
+cordova-plugin-device
+cordova-plugin-splashscreen
+cordova-plugin-app-version
+cordova-plugin-camera
+cordova-plugin-compat
+cordova-plugin-file
+cordova-plugin-file-transfer
+cordova-plugin-inappbrowser
+cordova-plugin-x-toast
+cordova-sqlite-storage
+
+//本地用到的,ssh://git@192.168.169.160/Repo/common/cordovaPlugin/cordovaPlugin.git
+cordova-plugin-x-socialsharing
+SecurityPlugin
+hxMap
+com.hxsmart.NFC

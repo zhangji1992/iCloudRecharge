@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            版本更新
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <div class="verCard">
+        <img src="assets/about/ver.png">
+        <div class="verAbout">
+            <div class="ver">
+                <div>当前版本：<span>V{{currentVer}}</span></div>
+                <div>检测到新版本：<span>V{{latestVer}}</span></div>
+            </div>
+            <div class="verTitle">
+                <div>修改内容：</div>
+            </div>
+            <div class="verContent">
+                <div>1.增加充值明细查询</div>
+                <div>2.增加我的行业卡信息</div>
+                <div>3.首页增加快捷键入口</div>
+            </div>
+        </div>
+    </div>
+    <button ion-button class="fullBtn" (click)="update()" *ngIf="latestVer != currentVer">更新版本</button>
+
+
+    <!--<div class="headImg">-->
+    <!--<img [attr.src]="imgSrc">-->
+    <!--<p>华信云充值</p>-->
+    <!--</div>-->
+    <!--<ion-list>-->
+    <!--<div class="VerCon">-->
+    <!--最新版本:-->
+    <!--<span class="version">{{platformType}}  {{latestVer}}</span>-->
+    <!--</div>-->
+    <!--<div class="VerCon">-->
+    <!--当前版本：-->
+    <!--<span class="version">{{platformType}}  {{currentVer}}</span>-->
+    <!--</div>-->
+    <!--</ion-list>-->
+    <!--<button ion-button class="btn-content" (click)="update()" *ngIf="latestVer != currentVer">升 级</button>-->
+</ion-content>

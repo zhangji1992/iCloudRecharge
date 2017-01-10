@@ -1,0 +1,70 @@
+etc-card-recharge-animate {
+    .contentBg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: -71px;
+        padding-top: 71px;
+
+        ul, li {
+            list-style: none;
+        }
+
+        .content {
+            position: relative;
+            height: 95%;
+            width: 85%;
+            margin-left: 10%;
+
+            .wrapb {
+                position: absolute;
+                width: 40%;
+                top: 100px;
+                right: 0;
+                animation: myfirst 3s linear 0s infinite alternate;
+            }
+
+            .wrapa {
+                position: absolute;
+                height: 100%;
+                padding-bottom: 80px;
+                padding-top: 20px;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+        }
+
+        @keyframes myfirst {
+            0% {
+                right: 0;
+            }
+            25% {
+                right: 10%;
+            }
+            50% {
+                right: 20%;
+            }
+            75% {
+                right: 30%;
+            }
+            100% {
+                right: 40%;
+            }
+        }
+
+        .tip {
+            color: #ff0000;
+            margin: auto;
+            padding-left: 0;
+            font-size: 12px;
+            height: 60px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+

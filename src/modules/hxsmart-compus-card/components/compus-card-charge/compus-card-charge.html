@@ -1,0 +1,54 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            校园卡充值
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="1" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+    <div class="infoWrap">
+        <div class="wrap">
+            <div class="left">卡号：</div>
+            <div class="right cardNo">{{compusCardObj.CardNo}}</div>
+        </div>
+        <div class="wrap">
+            <div class="left">姓名：</div>
+            <div class="right">{{compusCardObj.HoldClientNname}}</div>
+        </div>
+        <div class="wrap">
+            <div class="left">学校：</div>
+            <div class="right">{{compusCardObj.SupplierName}}</div>
+        </div>
+    </div>
+    <div class="chooseMountWrap">
+        <!--<label class="title color3">选择充值金额</label>-->
+        <div class="chargeMount">
+            <div class="divL">充值金额</div>
+            <input type="number" [ngClass]="{placeHolder: !chooseMount}" [(ngModel)]="chooseMount"
+                   (ngModelChange)="changeMountFun()" placeHolder="建议输入整数">
+            <div class="divR">元</div>
+        </div>
+
+        <div class="chooseMount">
+            <div [ngClass]="{active: chooseMountNum==1}" (click)="chooseMountFun(1)">500</div>
+            <div [ngClass]="{active: chooseMountNum==2}" (click)="chooseMountFun(2)">1000</div>
+            <div [ngClass]="{active: chooseMountNum==3}" (click)="chooseMountFun(3)">2000</div>
+        </div>
+
+    </div>
+    <div class="payWay">
+        支付方式
+    </div>
+    <compus-card-paylist></compus-card-paylist>
+</ion-content>
+<ion-footer>
+    <div class="subBtnWrap">
+        <div class="subLeft">
+            <span class="sp1">应付：</span>
+            <span class="sp2">￥{{chooseMount}}</span>
+        </div>
+        <div class="subRight" (click)="goNext()">确定</div>
+    </div>
+</ion-footer>

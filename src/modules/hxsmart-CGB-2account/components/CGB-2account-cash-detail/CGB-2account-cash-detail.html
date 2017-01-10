@@ -1,0 +1,27 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>Ⅱ类账户提现</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="2" [stepCon]="['提现','提现详情','完成']"></tool-steps>
+    <!--<div class="tip">-->
+    <!--<div class="tipContent1">-->
+    <!--<h2>提现详情</h2>-->
+    <!--<div class="tipCard">广发银行储蓄卡：{{navParams.get('account').bankCard.number | transHeadBody}}</div>-->
+    <!--<div class="tipValue">充值金额：{{navParams.get('value')}}元</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <div class="detWrap">
+        <div class="head"></div>
+        <div class="con">
+            <div class="contentD">
+                <div class="title">提现详情</div>
+                <div class="conItem">广发银行储蓄卡：{{navParams.get('account').bankCard.number | transHeadBody}}</div>
+                <div class="conItem conItemC">提现金额：{{navParams.get('value')}}元</div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+    <button class="fullBtn" (click)="cash()">提现</button>
+</ion-content>

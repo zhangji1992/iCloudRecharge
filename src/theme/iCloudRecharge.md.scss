@@ -1,0 +1,38 @@
+$tabs-md-background: #eeeeee !default;
+$tabs-md-tab-color-active: color($mlsColors, selectColor) !default;
+$tabs-md-tab-padding: 0px 0 3px 0;
+$tabs-md-tab-padding-active: 0px 0 3px 0;
+$tabs-md-tab-text-margin: 0px 0;
+$tabs-md-tab-text-margin-active: 0px 0;
+$tabs-md-tab-min-height: 5.0rem;
+$toolbar-md-height: 50px;
+$background-color: #f0f0f0;
+
+//标题居中，返回按钮重写，底部border
+.title-md {
+    height: 100%;
+}
+
+.toolbar-content-md {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.bar-buttons-md {
+    margin-left: 15px;
+}
+
+.back-button-icon-md {
+    //font-size: 2.4rem !important;
+}
+
+.header-md::after {
+    height: 0 !important;
+}

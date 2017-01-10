@@ -1,0 +1,29 @@
+<ion-header no-shadow>
+    <ion-navbar>
+        <ion-title>广告详情</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <img class="adThumbaniladImg" [attr.src]="imgSrc+navParams.data.content.smallPic">
+    <ion-list>
+        <ion-item>
+            <span>标题：</span>
+            <span>{{navParams.data.content.titile}}</span>
+        </ion-item>
+        <ion-item>
+            <span>内容：</span>
+            <span class="adThumbanilRightContent">{{navParams.data.content.content}}</span>
+        </ion-item>
+        <ion-item>
+            <span>开始日期：</span>
+            <span>{{navParams.data.content.putDate}}</span>
+        </ion-item>
+        <ion-item>
+            <span>截止日期：</span>
+            <span>{{navParams.data.content.advertEndDate}}</span>
+        </ion-item>
+    </ion-list>
+
+
+</ion-content>

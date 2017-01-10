@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-title>重置登录密码</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="completeContent">
+    <tool-steps [stepNow]="3" [stepCon]="['手机验证','设置新密码','完成']"></tool-steps>
+    <div class="wrap">
+        <div class="backgroundPic">
+            <ion-icon name="ios-checkmark" class="done-icon"></ion-icon>
+        </div>
+        <!--<div class="img"><ion-icon class="done-icon" name="ios-checkmark"></ion-icon></div>-->
+        <div class="word1">恭喜您，密码设置成功</div>
+    </div>
+    <div style="padding-top: 20px;">
+        <button class="fullBtn" (click)="completeReset()">完成</button>
+    </div>
+    <!--<div padding>-->
+    <!--<button ion-button block (click)="completeReset()">完成</button>-->
+    <!--</div>-->
+</ion-content>

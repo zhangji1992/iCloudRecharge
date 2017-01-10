@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            添加校园卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="1" [stepCon]="['添加校园卡','手机验证','确认']"></tool-steps>
+    <div class="wrap">
+        <div class="phone">
+            <span>学校：</span>
+            <input placeholder="点击选择学校" type="text" [(ngModel)]="Compus" (focus)="selectCompus()">
+        </div>
+        <div class="confirm">
+            <span>卡号：</span>
+            <input placeholder="请输入校园卡卡号" type="number" [(ngModel)]="CompusCardNo">
+        </div>
+    </div>
+    <div class="myDefFullBtn" (click)="goNext(obj)">下一步</div>
+</ion-content>

@@ -1,0 +1,26 @@
+my-message {
+    .messageList {
+        margin: 10px 0;
+        background-color: #fff;
+        padding: 25px 0 0 15px;
+        height: 90px;
+
+        .leftPart {
+            float: left;
+
+            .messageBG {
+                height: 40px;
+                width: 40px;
+                border-radius: 4px;
+                font-size: 1.8em;
+                text-align: center;
+                background-color: #FF4F4F;
+                color: #FFFFFF;
+            }
+        }
+
+        .rightPart {
+            margin-left: 55px;
+        }
+    }
+}

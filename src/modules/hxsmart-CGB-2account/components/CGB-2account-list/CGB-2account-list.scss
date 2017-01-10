@@ -1,0 +1,150 @@
+CGB-2account-list {
+
+}
+
+CGB-2account-list .item-ios.item-block .item-inner {
+    border-bottom: 0
+}
+
+CGB-2account-list .item-ios .item-block .item-inner {
+    border-bottom: 0
+}
+
+CGB-2account-list .border {
+    border-top: 1px solid #e0e0e0;
+    //border-bottom: 1px solid #e0e0e0;
+}
+
+CGB-2account-list .item {
+    padding: 5px 0px;
+    overflow: hidden;
+}
+
+CGB-2account-list .item div {
+    float: left;
+}
+
+CGB-2account-list .itema {
+    margin-left: 40px;
+    padding-top: 8px;
+}
+
+CGB-2account-list .itemb {
+    margin: 0px 30px;
+    padding-top: 1px;
+}
+
+CGB-2account-list .itemb img {
+    height: 30px;
+}
+
+CGB-2account-list .itemc {
+    font-size: 18px;
+    line-height: 35px;
+    color: #000;
+}
+
+CGB-2account-list .divChx {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #349feb;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+CGB-2account-list .divChxDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #349feb;
+    margin: 4px;
+}
+
+CGB-2account-list .gf-icon {
+    color: #ED242C;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+CGB-2account-list .account-content {
+    border: 1px solid #259D89;
+    border-radius: 5px;
+    background: linear-gradient(to right, #07AC91, #1CBEEC);
+    color: white;
+    margin-top: 10px
+}
+
+CGB-2account-list .account-content .header {
+    line-height: 2.5em;
+    height: 2.5em;
+}
+
+CGB-2account-list .balance-info {
+    width: 144px;
+    background: white;
+    padding-left: 12px;
+    line-height: 2.5em;
+    position: absolute;
+    right: 17px;
+    border-radius: 0 6px 0 5px;
+    font-size: 15px;
+    color: #757576;
+}
+
+CGB-2account-list .account-content .content-bottom {
+    background: white;
+    border-radius: 0 0 5px 5px;
+    line-height: 16px
+}
+
+CGB-2account-list .account-content .bank-logo {
+    font-size: 2.8em;
+    background: white;
+    color: #ED242B;
+    line-height: 60px;
+    border-radius: 50%;
+    height: 60px;
+}
+
+.bankInfo .accountType {
+    margin-left: 11px;
+    font-size: 1.3em;
+    position: relative;
+    top: -7px;
+}
+
+CGB-2account-list .account-content .content-center {
+    margin: 1em 0 1.5em 2em;
+}
+
+CGB-2account-list .account-content .content-center .accountNum {
+    margin-top: 1em;
+}
+
+CGB-2account-list .account-content .content-center .accountNum :first-child {
+    font-size: 1.3em;
+}
+
+.btn-font-color .button-inner {
+    color: #008D76;
+    font-size: 1.2em;
+}
+
+.btn-gap {
+    height: 16px;
+    border-right: 1.55px solid #06C4A3;
+    display: inline-block;
+    margin: -9px 0;
+}
+
+.btn-col {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.balance-toggle-btn {
+    font-size: 1.6em !important;
+    position: absolute;
+    right: 8px;
+}

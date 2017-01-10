@@ -1,0 +1,25 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-buttons left="true">
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>重置登录密码</ion-title>
+    </ion-toolbar>
+    <!--<ion-navbar>-->
+    <!--<ion-title>重置登录密码</ion-title>-->
+    <!--</ion-navbar>-->
+</ion-header>
+<ion-content class="verifyContent">
+    <tool-steps [stepNow]="1" [stepCon]="['手机验证','设置新密码','完成']"></tool-steps>
+    <p class="pwdTip">手机验证方式</p>
+    <user-volid-mobile [mobilePhone]="mobilePhone"
+                       [verifyType]="verifyType"
+                       [nextStr]="nextStr"
+                       [chgOpt]="'true'"
+                       (confirmAfter)="confirmAfter($event)"
+                       (changeWay)="changeWay($event)">
+    </user-volid-mobile>
+    <!--<button ion-button (click)="goNext()">下一页</button>-->
+</ion-content>

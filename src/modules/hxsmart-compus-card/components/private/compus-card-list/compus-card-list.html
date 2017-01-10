@@ -1,0 +1,80 @@
+<ion-header no-shadow>
+    <ion-navbar>
+        <ion-title>
+            校园卡列表
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p class="compusCardTitle">校园卡</p>
+    <ion-list>
+        <ion-item *ngFor="let cardlist of compusCard.cardEasyList">
+            <div class='compusCardEasyList'>
+                <div class="listMessage">
+                    <img *ngIf="cardlist.SupplierPartyId==38" src="assets/compus/compusCardList01.png">
+                    <img *ngIf="cardlist.SupplierPartyId==42" src="assets/compus/compusCardList02.png">
+                    <div>
+                        <p>姓名：{{cardlist.HoldClientNname}}</p>
+                        <p>学校：{{cardlist.SupplierName}}</p>
+                        <p>卡号：{{cardlist.CardNo}}</p>
+                    </div>
+                </div>
+                <p class="handleEvent">
+                    <span class="fontColor" (click)="goToCharge(cardlist)">充值</span>
+                    <span>|</span>
+                    <span class="fontColor" (click)='goToChargeDetail(cardlist)'>充值明细</span>
+                    <span>|</span>
+                    <span class="fontColor" (click)='goToConsumeDetail(cardlist.CardNo)'>消费明细</span>
+                </p>
+            </div>
+        </ion-item>
+    </ion-list>
+    <p class="compusCardTitle">校园服务</p>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div class="border" (click)="goToCourse()">
+                    <div class="Mycontent">
+                         <span class="color01">
+                            <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
+                        </span>
+                        <p class="myText">课程表</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border" (click)="goToMark()">
+                    <div class="Mycontent">
+                        <span class="color02">
+                            <ion-icon ios="ios-list-box-outline" name="list-box"></ion-icon>
+                        </span>
+                        <p class="myText">考试成绩</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border" (click)="goToPayment()">
+                    <div class="Mycontent">
+                        <span class="color03">
+                            <ion-icon name="time" md="md-time"></ion-icon>
+                        </span>
+                        <p class="myText">缴费通知</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col width-33>
+                <div class="border" (click)="goToRecord()">
+                    <div class="Mycontent">
+                         <span class="color04">
+                            <ion-icon ios="ios-paper" md="md-paper"></ion-icon>
+                        </span>
+                        <p class="myText">通行记录</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

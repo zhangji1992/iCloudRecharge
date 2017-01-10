@@ -1,0 +1,72 @@
+page-finance ion-grid {
+    background: white;
+}
+
+page-finance ion-grid ion-col {
+    border: 1px solid #ccc;
+    border-top-width: 0;
+    border-left-width: 0;
+    padding: 5px 0 0 0;
+}
+
+page-finance ion-grid .second-row ion-col {
+    border-bottom-width: 0;
+    border-top-width: 0;
+    padding: 5px 0 0 0;
+}
+
+page-finance ion-grid ion-col div {
+    margin: 18px 0 15px 0;
+}
+
+page-finance ion-grid ion-col i {
+    margin-top: 5px;
+}
+
+.border-right-none {
+    border-right-width: 0;
+}
+
+.size40 {
+    font-size: 40px;
+}
+
+.first-icon {
+    color: rgba(0, 128, 0, 0.73);
+    font-weight: 600;
+}
+
+.second-icon {
+    color: orange;
+    position: relative;
+    top: 8px;
+}
+
+.three-icon {
+    color: rgba(0, 128, 0, 0.73);
+    position: relative;
+    top: 7px;
+}
+
+.four-icon {
+    color: #08A49D;
+    font-size: 54px;
+}
+
+.five-icon {
+    color: #327FFF;
+    position: relative;
+    top: 8px;
+}
+
+.six-icon {
+    position: relative;
+    color: #08A49D;
+    top: 8px;
+}
+
+.divTop {
+    position: relative;
+    top: -15px;
+}
+

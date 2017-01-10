@@ -1,0 +1,44 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>Ⅱ类账户详情</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list no-lines style="margin-top: 2em;background-color: white">
+        <ion-list-header style="margin: 0;
+    border: none;
+/*padding-top: 0.4em;*/
+min-height: 2.5em;
+height: 2.5em;
+background-color: white;
+padding-left: 2em;">
+            <img src="assets/pay-method-list/CG.png" style="height: 40%;width: 40%">
+        </ion-list-header>
+        <div style="height: 1px;margin: 0 1em 0;background-color: #D1D1D1"></div>
+        <ion-item style="background-color: white;padding-left: 2em">
+            <ion-label>Ⅱ类账户</ion-label>
+            <ion-input [value]="navParams.get('account').number" disabled></ion-input>
+        </ion-item>
+        <ion-item style="background-color: white;padding-left: 2em">
+            <ion-label>户名：</ion-label>
+            <ion-input [value]="navParams.get('account').holdUserName" disabled></ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-list style="margin-top: 1em;background-color: white">
+        <ion-item style="background-color: white;margin-top: 1em;padding-left: 2em">
+            <ion-label>签约储蓄卡号：</ion-label>
+            <ion-input [value]="navParams.get('account').bankCard.number" disabled></ion-input>
+        </ion-item>
+    </ion-list>
+    <!--<div text-center style="margin-top: 7em">-->
+    <!--<h4>广发Ⅱ二类账户</h4>-->
+    <!--</div>-->
+    <!--<div style="padding:3em 6em">-->
+    <!--<div>广发Ⅱ类账户{{navParams.get('account').number}}</div>-->
+    <!--<div>户名：{{navParams.get('account').holdUserName}}</div>-->
+    <!--</div>-->
+    <!--<div style="padding-left: 2em">签约借记卡号：{{navParams.get('account').bankCard.number}}</div>-->
+    <button class="fullBtn"
+            (click)="deleteAccount({partyId:user.getUserInfo().id,AccountId:navParams.get('account').id})">删除二类账户
+    </button>
+</ion-content>

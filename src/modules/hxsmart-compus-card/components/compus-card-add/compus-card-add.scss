@@ -1,0 +1,30 @@
+compus-card-add {
+    .wrap {
+        background: #fff;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        div {
+            padding: 8px 0px 8px 5%;
+            height: 56px;
+            line-height: 40px;
+            position: relative;
+            span {
+                color: #000000;
+                font-size: 16px;
+            }
+            input {
+                border: none;
+                outline: none;
+                height: 40px;
+                font-size: 16px;
+                color: #000;
+                padding-left: 20px;
+            }
+        }
+        .phone {
+            border-bottom: 1px solid #e9e9e9;
+        }
+    }
+}

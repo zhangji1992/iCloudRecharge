@@ -1,0 +1,20 @@
+<div class="itemWrap">
+    <div *ngFor="let payChannel of payChannelList; let i = index">
+        <div class="item" (click)="selectWay(i)">
+            <div class="logo"><img src="assets/pay-method-list/bank.png" alt=""></div>
+            <div class="word">{{payChannel.accountTypeName}}({{payChannel.accountNo | footer}}) 费率
+                {{payChannel.feeRedix}}%
+            </div>
+            <div class="check" *ngIf="payChannel.IsDefault == 1"><img src="assets/compus/select.png" alt=""></div>
+            <div class="check" *ngIf="payChannel.IsDefault != 1"><img src="assets/compus/unselect.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="more" *ngIf="!ifExpand" (click)="payChannelList = etcCard.payChannelList;ifExpand = !ifExpand;">
+    更多支付方式
+    <ion-icon name='arrow-dropdown' color="dark"></ion-icon>
+</div>
+<div class="more" *ngIf="ifExpand" (click)="payChannelList = etcCard.payChannelList.slice(0, 1);ifExpand = !ifExpand;">
+    收起
+    <ion-icon name='arrow-dropup' color="dark"></ion-icon>
+</div>

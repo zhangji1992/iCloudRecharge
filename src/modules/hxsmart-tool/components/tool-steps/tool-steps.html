@@ -1,0 +1,21 @@
+<div class="stepWrap">
+    <div class="step" *ngFor="let step of stepWordNew; let i=index">
+        <div class="stepLine" [ngClass]="{bg1: stepNow>i+1&&stepNow!=i+2,bg2: stepNow==i+2}"></div>
+
+        <div class="stepNumWrap">
+            <div class="stepNum" [ngClass]="{bg1: stepNow>i&&stepNow!=i+1,bg2: stepNow==i+1}">{{i+1}}</div>
+        </div>
+
+        <div class="stepWord" [ngClass]="{bg1: stepNow>i&&stepNow!=i+1,bg2: stepNow==i+1}">
+            {{step}}
+        </div>
+
+        <div *ngIf="i+2==stepNum" class="stepNumWrap lastStep">
+            <div class="stepNum" [ngClass]="{bg2: stepNow==stepNum}">{{stepNum}}</div>
+        </div>
+
+        <div *ngIf="i+2==stepNum" class="stepWord stepWordLast" [ngClass]="{bg2: stepNow==stepNum}">
+            {{stepLast}}
+        </div>
+    </div>
+</div>

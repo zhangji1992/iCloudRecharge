@@ -1,0 +1,85 @@
+user-volid-email {
+    font-family: "Microsoft YaHei";
+
+    .email-list {
+        background-color: #ffffff;
+        border: solid 1px #E9E9E9;
+
+        .rowLine {
+            border-bottom: solid 1px #DDDDDD;
+            width: 98%;
+            margin: auto;
+        }
+    }
+}
+
+user-volid-email .verifyEmailContent {
+    margin-top: 2em;
+}
+
+user-volid-email input {
+    border: none;
+}
+
+user-volid-email .listItem .emailLbl {
+    padding-left: 5%;
+    font-size: 16px;
+}
+
+user-volid-email .listItem input {
+    height: 56px;
+    width: 40%;
+    font-size: 16px;
+}
+
+user-volid-email .listItem button {
+    height: 34px;
+    width: 30%;
+    float: right;
+    color: #2A84C3;
+    background-color: #ffffff;
+    border-radius: 2px;
+    border: solid 1px;
+    margin-right: 5%;
+    margin-top: 11px;
+    line-height: 32px;
+}
+
+user-volid-email .item-down .codeLbl {
+    padding-left: 5%;
+    font-size: 16px;
+}
+
+user-volid-email .verify {
+    height: 56px;
+    width: 75%;
+    color: #000000;
+    font-size: 16px;
+}
+
+user-volid-email .isShowChg .chgOpt {
+    height: 10px;
+}
+
+user-volid-email .isShowChg .chgOpt button {
+    float: right;
+    margin-right: 5%;
+    background-color: #f0f0f0;
+    color: #2A84C3;
+    font-size: 17px;
+}
+
+user-volid-email .verifyLimit {
+    color: #CBCCCC
+}
+
+user-volid-email .bigBtn {
+    color: white;
+    background-color: #2A84C3;
+    font-size: 20px;
+    height: 40px;
+}
+
+user-volid-email .btnDiv {
+    padding-top: 3em;
+}

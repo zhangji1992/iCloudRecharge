@@ -1,0 +1,41 @@
+user-status {
+    font-size: 20px;
+}
+
+user-status .statusBg {
+    background: url("../assets/user/status_bg.png");
+    background-size: cover;
+    height: 180px;
+}
+
+user-status .avatar img {
+    width: 9rem;
+    height: 9rem;
+    margin: auto;
+}
+
+user-status ion-col {
+    margin-bottom: -1.5rem;
+    margin-top: -0.5em;
+}
+
+user-status .optBtn {
+    font-size: 20px;
+    color: #24678D;
+    padding: 0 0.5em;
+}
+
+user-status .optBtnReg {
+    color: #5A88A2;
+}
+
+.my-header.ion-ios-person:before {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color: #FE8978;
+    font-size: 2em;
+    line-height: 60px;
+    border: 6px solid rgba(221, 221, 221, 0.5);
+    background: #fff;
+}

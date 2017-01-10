@@ -1,0 +1,59 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            燃气卡充值
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="2" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+    <div class="detWrap">
+        <div class="head"></div>
+        <div class="con">
+            <div class="content">
+                <div class="title">充值详情</div>
+                <div class="conItem">卡号：{{this.navParam.data.carNo}}</div>
+                <div class="conItem">购买气量：{{this.navParam.data.gasNum}}</div>
+                <div class="conItem">购买金额：{{this.navParam.data.gasPrice}}</div>
+                <div class="conItem conItemC">单位名称：{{this.navParam.data.SupplierName}}</div>
+                <div class="conItem">支付方式：{{this.navParam.data.accountTypeName}}</div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+    <div class="myTable">
+        <p>当前购买情况</p>
+        <table>
+            <thead>
+            <tr>
+                <td>阶梯级数</td>
+                <td>单价(元/方)</td>
+                <td>购气量(方)</td>
+                <td>剩余额度(方)</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>150</td>
+                <td>20</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>150</td>
+                <td>20</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>150</td>
+                <td>20</td>
+                <td>3</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="myDefFullBtn" (click)="goNext()">确定</div>
+</ion-content>

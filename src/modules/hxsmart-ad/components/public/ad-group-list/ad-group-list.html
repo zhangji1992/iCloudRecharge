@@ -1,0 +1,12 @@
+<div class="ad-group-list">
+    <h3>资讯&活动</h3>
+    <hr/>
+    <div *ngFor="let item of adService.homeAdData">
+        <ad-layout-1 *ngIf="item.layoutNo == '2'" [adData]="item.layoutAdvertList"></ad-layout-1>
+        <ad-layout-2 *ngIf="item.layoutNo == '3'" [adData]="item.layoutAdvertList"></ad-layout-2>
+        <hr *ngIf="item.layoutNo == '2' || item.layoutNo == '3'"/>
+    </div>
+</div>
+
+
+

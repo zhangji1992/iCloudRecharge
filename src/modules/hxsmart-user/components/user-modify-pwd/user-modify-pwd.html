@@ -1,0 +1,28 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            修改密码
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="modifyPwd">
+    <ion-list style="margin: 1.5em 0 4em">
+        <ion-item>
+            <ion-label>旧密码：</ion-label>
+            <ion-input type="password" placeholder="请输入旧密码" [(ngModel)]="oldPwd"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>设置新密码：</ion-label>
+            <ion-input type="password" placeholder="请输入新密码" [(ngModel)]="newPwd"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>确认设置新密码：</ion-label>
+            <ion-input type="password" placeholder="请再次输入新密码" [(ngModel)]="reNewPwd"></ion-input>
+        </ion-item>
+    </ion-list>
+    <!--<div padding>-->
+    <!--<button class="btn" ion-button block (click)="changePwd()" [disabled]="!oldPwd || !newPwd || !reNewPwd">确定</button>-->
+    <!--</div>-->
+    <button class="fullBtn" (click)="changePwd()" [disabled]="!oldPwd || !newPwd || !reNewPwd">确定</button>
+</ion-content>
+

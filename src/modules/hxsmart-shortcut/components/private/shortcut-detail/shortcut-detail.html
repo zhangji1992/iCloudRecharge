@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="manage()">
+                完成
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+
+    <ion-row class="contentPart">
+
+        <ion-col class="eachBox" *ngFor="let it of shortcut.shortcutsDetail; let i = index">
+            <div class="circle" [style.background-color]="it.color">
+                <ion-icon class="iconCss" [name]="it.icon"></ion-icon>
+            </div>
+            <div class="contentCss">{{it.txt}}</div>
+            <ion-checkbox class="checkboxCss" [checked]="it.isShow" (click)="toggle(i)"></ion-checkbox>
+        </ion-col>
+
+    </ion-row>
+</ion-content>
+
+

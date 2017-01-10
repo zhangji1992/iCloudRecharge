@@ -1,0 +1,19 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            添加燃气卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="2" [stepCon]="['添加燃气卡','手机验证','确认']"></tool-steps>
+    <div class="title">
+        手机验证方式
+    </div>
+
+    <user-volid-mobile [mobilePhone]="mobilePhone"
+                       [verifyType]="verifyType"
+                       [nextStr]="nextStr"
+                       (confirmAfter)="confirmAfter($event)"></user-volid-mobile>
+</ion-content>

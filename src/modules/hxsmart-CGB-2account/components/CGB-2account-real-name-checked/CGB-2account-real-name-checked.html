@@ -1,0 +1,13 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>Ⅱ类账户身份验证</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p class="bindEmailTip">Ⅱ类账户身份验证</p>
+    <user-volid-mobile [mobilePhone]="navParams.get('rel').phone"
+                       [verifyType]="'BindPayAccount'"
+                       [nextStr]="'other'"
+                       (confirmAfter)="confirmAfter($event)">
+    </user-volid-mobile>
+</ion-content>

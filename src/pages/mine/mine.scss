@@ -1,0 +1,110 @@
+page-mine {
+    .content {
+        font-family: "Microsoft YaHei";
+        ion-list {
+            margin: -1px 0 10px 0px !important;
+        }
+
+        .list-up, .list-middle, .list-down {
+            ion-item {
+                border: 1px solid #f0f0f0 !important;
+                background-color: #FFFFFF;
+                padding: 0 30px;
+
+                .item-inner {
+                    border: #FFFFFF !important;
+                }
+
+                div:nth-child(2) {
+                    padding-left: 15px;
+                }
+            }
+        }
+
+        .list-item {
+            position: relative;
+            //min-height: 3rem;
+            //height: 4rem;
+
+            .roundedSquare {
+                height: 32px;
+                width: 32px;
+                border-radius: 8px;
+
+                .listIcon {
+                    text-align: center;
+                    line-height: 32px;
+                    width: 32px;
+                    font-size: 26px;
+                    color: #fff;
+                }
+            }
+
+            .circleBG {
+                position: absolute;
+                right: 60px;
+                top: 14px;
+                display: inline-block;
+                background-color: red;
+                padding: 2px 6px;
+                border-radius: 10px;
+
+                color: #FFFFFF;
+                font-size: .8em;
+            }
+
+            .squareColor1 {
+                background-color: #FF6B53;
+            }
+
+            .squareColor2 {
+                background-color: #C3A4F8;
+            }
+
+            .squareColor3 {
+                background-color: #FBB161;
+            }
+
+            .squareColor4 {
+                background-color: #3FA6D6;
+            }
+
+            .squareColor5 {
+                background-color: #FD66D1;
+            }
+
+            .squareColor6 {
+                background-color: #94C52C;
+            }
+
+            .squareColor7 {
+                background-color: #3FC9D6;
+            }
+
+            .squareColor8 {
+                background-color: #FF82A5;
+            }
+
+            .squareColor9 {
+                background-color: #A074BC;
+            }
+
+            .iconRight {
+                font-size: 26px;
+                color: #c2c2c2;
+            }
+        }
+
+        .btn-content {
+            display: block;
+            background-color: #2A84C3;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            height: 40px;
+            width: 95%;
+            border-radius: 5px;
+        }
+    }
+}

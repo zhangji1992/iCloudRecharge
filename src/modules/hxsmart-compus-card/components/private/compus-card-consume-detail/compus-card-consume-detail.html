@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            消费明细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="下拉刷新"
+            refreshingSpinner="bubbles"
+            refreshingText="更新中...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <!--<div class="content">
+        <p class="title">校园卡：00251</p>
+        <table>
+            <thead>
+            <tr>
+                <td class="td01">交易时间</td>
+                <td class="td02">消费金额</td>
+                <td class="td03">余额</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let charge of compusCard.chargeList">
+                <td>{{charge.ExpenseDate}}</td>
+                <td>{{charge.ExpAmt}}</td>
+                <td>{{charge.Balance}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>-->
+    <div class="myTitle">
+        <p>校园卡卡号：{{navParams.data}}</p>
+        <img src="assets/compus/chargeDetail.png">
+    </div>
+    <ion-list>
+        <ion-item *ngFor="let charge of compusCard.chargeList">
+            <p>
+                <span>￥ 余额:</span>
+                <span>{{charge.Balance}}</span>
+            </p>
+            <p class="marginTop">
+                <span>￥ 消费金额:</span>
+                <span>{{charge.ExpAmt}}</span>
+            </p>
+            <p class="marginTop">
+                <span class="payTime">ˇ</span>
+                <span>交易时间:</span>
+                <span>{{charge.ExpenseDate}}</span>
+            </p>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="20%" enabled="true">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="加载更多...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

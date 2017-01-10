@@ -1,0 +1,89 @@
+user-login {
+
+}
+
+user-login .register {
+    background: url("../assets/user/loginBG.png") !important;
+    background-size: cover !important;
+}
+
+user-login .register .scroll-content {
+    overflow-y: auto;
+}
+
+user-login .headerBg img {
+    width: 32%;
+}
+
+user-login .register ion-item {
+    background-color: #FFFFFF;
+    height: 57px;
+}
+
+user-login .bigBtn .button-inner {
+    font-size: 20px;
+    height: 46px;
+}
+
+user-login .textMsg {
+    font-family: "Microsoft YaHei";
+    font-size: 16px;
+    color: #B0B0B0;
+}
+
+user-login .registerBtn {
+    color: white;
+    font-size: 17px;
+    margin-left: 14px;
+    font-family: "Microsoft YaHei";
+}
+
+user-login .pwdBtn {
+    float: right;
+    color: white;
+    margin-right: 10px;
+    font-size: 17px;
+    font-family: "Microsoft YaHei";
+}
+
+user-login .label-ios + ion-input .text-input, .label-ios + ion-textarea .text-input {
+    margin-left: 6px;
+    color: #000;
+}
+
+user-login .input-md[clearInput] .text-input {
+    padding-right: 30px;
+    color: #000;
+}
+
+user-login .arrow1 {
+    color: #fff;
+    margin-left: 22px;
+    margin-top: 11px;
+    font-size: 2.4em;
+}
+
+user-login .label-md {
+    margin: 13px 8px 13px 17px;
+}
+
+user-login .item-md {
+    padding-left: 0;
+}
+
+user-login .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-login .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-login .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+
+}
+

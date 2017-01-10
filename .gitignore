@@ -1,0 +1,17 @@
+# Created by .ignore support plugin (hsz.mobi)
+#/.gitignore
+/.idea
+#/config.xml
+/readme.md
+#/tslint.json
+#/ionic.config.json
+#/package.json
+/npm-debug.log
+#/node_modules.rar
+#/tsconfig.json
+/src/modules/hxsmart-shortcut/components/base64.html
+/www/
+/node_modules/
+/platforms/
+*.log.*
+/plugins/

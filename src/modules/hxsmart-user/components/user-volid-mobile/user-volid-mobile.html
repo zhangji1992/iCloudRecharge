@@ -1,0 +1,30 @@
+<div class="verifyMobileContent">
+    <ion-list class="mobile-list">
+        <div class="listItem">
+            <label class="mobileLbl">手机号：</label>
+            <input type="text" maxlength="11" name="telPhone" validateMobile #telPhone="ngModel" required
+                   [(ngModel)]="phone" [readonly]="phoneIpt" placeholder="手机号">
+            <button type="button" (click)="sendCode()" [disabled]="sendDisabled">发送验证码</button>
+        </div>
+        <div class="rowLine"></div>
+        <div class="item-down">
+            <label class="codeLbl">验证码：</label>
+            <input class="verify" type="text" placeholder="验证码" [(ngModel)]="confirmCode">
+        </div>
+    </ion-list>
+    <div *ngIf="chgOpt" class="isShowChg">
+        <div class="chgOpt">
+            <button type="button" (click)="switchEmail()">切换邮箱</button>
+        </div>
+    </div>
+    <div text-center *ngIf="timerStatus">
+        <p class="verifyLimit">{{nums}}秒后重新获取</p>
+    </div>
+    <div style="height: 50px"></div>
+    <button class="fullBtn" (click)="nextStep()" [disabled]="!this.phone || !this.confirmCode || !sendDisabled">
+        {{nextStepInput}}
+    </button>
+    <!--<div padding class="btnDiv">-->
+    <!--<button ion-button  block (click)="nextStep()" class="bigBtn" [disabled]="!this.phone || !this.confirmCode || !sendDisabled">{{nextStepInput}}</button>-->
+    <!--</div>-->
+</div>

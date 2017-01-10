@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            ETC储值卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p class="etcCardTitle">ETC储值卡</p>
+
+    <ion-list>
+        <ion-item *ngFor="let card of etcCard.etcCardList">
+            <div class='etcCardSimpleList'>
+                <div class="listMessage">
+                    <img src="assets/etc/etcCard.png">
+                    <div>
+                        <p>持卡人：{{card.HoldCardName || '暂无数据'}}</p>
+                        <p>车牌号：{{card.CarNum || '暂无数据'}}</p>
+                        <p>卡号：{{card.ETCCardNo || '暂无数据'}}</p>
+                    </div>
+                </div>
+                <p class="handleEvent">
+                    <span class="fontColor" (click)="goToCharge(card)">充值</span>
+                    <span>|</span>
+                    <span class="fontColor" (click)='goToChargeRecord(card)'>充值明细</span>
+                </p>
+            </div>
+        </ion-item>
+    </ion-list>
+
+    <p class="etcCardTitle">ETC卡</p>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div class="border">
+                    <div class="Mycontent">
+                         <span class="color01">
+                            <ion-icon name="pin"></ion-icon>
+                        </span>
+                        <p class="myText">附近充值点</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border">
+                    <div class="Mycontent">
+                        <span class="color02">
+                            <ion-icon name="hand"></ion-icon>
+                        </span>
+                        <p class="myText">ETC操作指南</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border">
+                    <div class="Mycontent">
+                        <span class="color03">
+                            <ion-icon name="ionitron"></ion-icon>
+                        </span>
+                        <p class="myText">我的客服</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

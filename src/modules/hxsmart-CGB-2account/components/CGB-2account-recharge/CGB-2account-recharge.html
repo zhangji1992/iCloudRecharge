@@ -1,0 +1,26 @@
+<tool-steps [stepNow]="1" [stepCon]="['充值','充值详情','完成']"></tool-steps>
+<ion-list style="margin-top: 1em" no-lines>
+    <ion-item style="background-color: white;">
+        <ion-label style="color: black">充值金额</ion-label>
+        <ion-input [(ngModel)]="myValue" type="number" placeholder="建议输入100以上,小数点后2位"></ion-input>
+    </ion-item>
+</ion-list>
+<button ion-button small clear outline style="float: right;margin-top: -1em;color: #FF0000;text-decoration: underline">
+    限额说明
+</button>
+<ion-list no-lines>
+    <ion-list-header style="margin: 0;
+    border: none;
+padding-top: 0.4em;
+min-height: 2.5em;
+height: 2.5em;">
+        资金来源
+    </ion-list-header>
+    <ion-item style="background-color: white;color: black">
+        <ion-label>广发银行储蓄卡（尾号{{info.bankCard.number | footer}}）</ion-label>
+    </ion-item>
+</ion-list>
+<button class="fullBtn" (click)="goRechangeDetail()" [disabled]="!myValue">确定</button>
+
+
+

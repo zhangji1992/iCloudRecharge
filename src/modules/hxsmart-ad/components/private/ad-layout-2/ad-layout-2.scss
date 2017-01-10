@@ -1,0 +1,32 @@
+.adLayout2 {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: white;
+}
+
+.adLayout2 ion-row {
+    /*border-bottom: 1px solid #c8c7cc;*/
+}
+
+.adLayout2 ion-col {
+    text-align: center;
+    padding: 1.2rem 0;
+}
+
+.adLayout2 ion-col:not(:last-child) div {
+    border-right: 1px solid #c8c7cc;
+}
+
+.adLayout2 h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0.4rem;
+
+}
+
+.adLayout2 p {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+    color: #666;
+}

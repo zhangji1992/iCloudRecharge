@@ -1,0 +1,23 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            选择燃气公司
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="close()">
+                关闭
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar (ionInput)="getItems($event)" [(ngModel)]="searchCompus" placeholder="请输入燃气公司关键词"></ion-searchbar>
+    <ion-list radio-group>
+        <ion-item *ngFor="let item of items" (tap)="selectChange(item,ev)">
+            <ion-label>{{ item.supplierName }}</ion-label>
+            <ion-radio value="{{ item.supplierName }}"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <button ion-button class="fullBtn" (click)="confirm()" [disabled]="confirmBol">确定</button>
+</ion-content>

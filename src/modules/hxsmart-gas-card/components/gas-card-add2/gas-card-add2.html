@@ -1,0 +1,17 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            添加燃气卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <tool-steps [stepNow]="3" [stepCon]="['添加燃气卡','手机验证','确认']"></tool-steps>
+    <div class="listWrap">
+        <div><span>户名：</span>{{bindCardInfo.GuardianPhone}}</div>
+        <div><span>卡号：</span>{{bindCardInfo.CardNo}}</div>
+        <div><span>燃气公司：</span>{{bindCardInfo.gasCompany}}</div>
+    </div>
+    <div class="myDefFullBtn" (click)="add()">确认添加</div>
+</ion-content>

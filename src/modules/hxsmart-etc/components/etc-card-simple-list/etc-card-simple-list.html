@@ -1,0 +1,21 @@
+<div class="myContent">
+    <p class="title">ETC卡</p>
+    <div class="add" (click)="addEtcCard()">
+        <span>+</span>
+        <span>ETC卡</span>
+    </div>
+    <ion-list no-lines>
+
+        <ion-item *ngFor="let card of etcCard.etcCardList">
+            <div class='etcCardSimpleList' (click)='goToDetail(card)'>
+                <img src="assets/etc/etcCard.png">
+                <div class="message">
+                    <p>持卡人：{{card.HoldCardName || '暂无数据'}}</p>
+                    <p>车牌号：{{card.CarNum || '暂无数据'}}</p>
+                    <p>卡号：{{card.ETCCardNo || '暂无数据'}}</p>
+                </div>
+            </div>
+        </ion-item>
+
+    </ion-list>
+</div>

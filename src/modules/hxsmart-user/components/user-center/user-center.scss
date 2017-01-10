@@ -1,0 +1,52 @@
+user-center {
+
+}
+
+user-center .contain {
+    margin-top: 30px;
+}
+
+user-center .ion-Edit {
+    font-size: 2.5em;
+}
+
+user-center .icon-md-light {
+    color: #808080;
+    margin-right: 10px;
+}
+
+user-center .center {
+    font-family: "Microsoft YaHei";
+}
+
+user-center .center .scroll-content {
+    overflow-y: auto;
+}
+
+user-center .center ion-item {
+    background-color: #FFFFFF;
+    font-size: 18px;
+    height: 56px;
+}
+
+user-center .ion-header {
+    border-top: 1px solid #DDDDDD;
+}
+
+user-center .item-md {
+    padding-right: 6px;
+    padding-left: 8px;
+}
+
+user-center .label-md {
+    margin: 13px 8px 13px 20px;
+}
+
+user-center .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #000000;
+    font-size: 16px;
+}
+
+user-center .item-md [item-left], .item-md [item-right] {
+    margin: 9px -3px 9px 0;
+}

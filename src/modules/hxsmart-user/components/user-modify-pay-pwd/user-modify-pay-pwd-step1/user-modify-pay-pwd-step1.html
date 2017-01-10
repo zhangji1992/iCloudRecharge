@@ -1,0 +1,12 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            重置支付密码
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="content">
+    <p class="titlePwd">通过手机号验证并重置支付密码</p>
+    <user-volid-mobile [verifyType]="verifyType" [mobilePhone]="userService.getUserInfo().phone" [nextStr]="'other'"
+                       (confirmAfter)="confirmAfter($event)"></user-volid-mobile>
+</ion-content>

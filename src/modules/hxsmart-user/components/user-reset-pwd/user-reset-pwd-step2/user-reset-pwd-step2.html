@@ -1,0 +1,25 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>重置登录密码</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="setContent">
+    <tool-steps [stepNow]="2" [stepCon]="['邮箱验证','设置新密码','完成']"></tool-steps>
+    <p class="pwdTip">设置新密码</p>
+    <ion-list no-lines class="list-item">
+        <ion-item class="input-item input-item1">
+            <ion-label class="item-word">新密码：</ion-label>
+            <ion-input type="password" [(ngModel)]="newPwd" placeholder="请输入密码"></ion-input>
+        </ion-item>
+        <ion-item class="input-item">
+            <ion-label class="item-word">确认新密码：</ion-label>
+            <ion-input type="password" [(ngModel)]="reNewPwd" placeholder="请再次输入密码"></ion-input>
+        </ion-item>
+    </ion-list>
+    <div style="padding-top: 30px;">
+        <button class="fullBtn" (click)="resetPwd()" [disabled]="!this.newPwd || !this.reNewPwd">确定</button>
+    </div>
+    <!--<div padding>-->
+    <!--<button class="btn" ion-button block (click)="resetPwd()" [disabled]="!pwd.valid || !rePwd.valid || !(pwd.value==rePwd.value)">确定</button>-->
+    <!--</div>-->
+</ion-content>

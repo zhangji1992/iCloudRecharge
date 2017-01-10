@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            添加ETC储值卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>添加ETC储值卡</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="stepNow" [stepCon]="['添加行业卡','身份验证','确认']"></tool-steps>
+
+    <!--stepNow = 1-->
+    <ion-list class="wrap" *ngIf="stepNow == 1">
+        <ion-item class="item">
+            <ion-label class="label1">ETC类型</ion-label>
+            <ion-select class="select1" interface="action-sheet" cancelText="取消" placeholder="请选择ETC类型"
+                        [(ngModel)]="etcType">
+                <ion-option value="266">粤通卡</ion-option>
+                <ion-option value="1000">类型2</ion-option>
+                <ion-option value="2000">类型3</ion-option>
+                <ion-option value="3000">类型4</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item class="item">
+            <ion-label class="label2">卡号</ion-label>
+            <ion-input clearInput type="number" placeholder="请输入ETC储值卡卡号" [(ngModel)]="etcCardNo"></ion-input>
+        </ion-item>
+        <div class="helpBG">
+            <button class="help" ion-button color="danger" clear (click)="openModel()">卡号在哪里?</button>
+        </div>
+        <button class="fullBtn" (click)="goNext()" *ngIf="stepNow == 1" [disabled]="!etcType || !etcCardNo">下一步</button>
+    </ion-list>
+
+    <!--stepNow = 2-->
+    <div class="wrap2" *ngIf="stepNow == 2">
+
+        <div class="title">手机验证方式</div>
+
+        <user-volid-mobile [verifyType]="'ResetMobilePhone'"
+                           [mobilePhone]="phone"
+                           [nextStr]="'下一步'"
+                           (confirmAfter)="goNext()">
+        </user-volid-mobile>
+
+    </div>
+
+    <!--stepNow = 3-->
+    <div class="wrap3" *ngIf="stepNow == 3">
+        <div class="type">
+            <ion-item>
+                <span class="itemNormal">持卡人：</span>
+                <span class="itemStrength">{{etcCardDetails.HoldCardName || '暂无数据'}}</span>
+            </ion-item>
+            <ion-item>
+                <span class="itemNormal">车牌号：</span>
+                <span class="itemStrength">{{etcCardDetails.CarNum || '暂无数据'}}</span>
+            </ion-item>
+            <ion-item>
+                <span class="itemNormal">车辆行驶证号码：</span>
+                <span
+                    class="itemStrength">{{etcCardDetails.CarDriveNum || '暂无数据'}}</span>
+            </ion-item>
+            <ion-item>
+                <span class="itemNormal">手机：</span>
+                <span class="itemStrength">{{phone || '暂无数据'}}</span>
+            </ion-item>
+            <ion-item>
+                <span class="itemNormal">卡号：</span>
+                <span class="itemStrength">{{etcCardNo || '暂无数据'}}</span>
+            </ion-item>
+        </div>
+
+        <button class="fullBtn" (click)="goNext(obj)" *ngIf="stepNow == 3">确认添加</button>
+    </div>
+
+</ion-content>

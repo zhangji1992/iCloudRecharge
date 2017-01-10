@@ -1,0 +1,24 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>重置支付密码</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="resetPwd">
+    <ion-list style="margin-top: 18px;">
+        <ion-item style="font-size: 16px" class="listItem">
+            <ion-label class="itemLbl">重置支付密码：</ion-label>
+            <ion-input type="password" placeholder="请输入密码" [(ngModel)]="pwdFlag1" (focus)="iptPayPwd()"></ion-input>
+        </ion-item>
+        <ion-item style="font-size: 16px" class="listItem">
+            <ion-label class="itemLbl">确认重置支付密码：</ion-label>
+            <ion-input type="password" placeholder="请再次输入密码" [(ngModel)]="pwdFlag2" (focus)="reIptPayPwd()"></ion-input>
+        </ion-item>
+    </ion-list>
+    <!--<div padding>-->
+    <!--<button ion-button block (click)="modify()" class="bigBtn" [disabled]="!payPwd||!rePayPwd">确定</button>-->
+    <!--</div>-->
+    <div style="padding-top: 30px">
+        <button class="fullBtn" (click)="modify()" [disabled]="!payPwd||!rePayPwd">确定</button>
+    </div>
+</ion-content>
+

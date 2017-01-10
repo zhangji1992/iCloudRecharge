@@ -1,0 +1,19 @@
+<ion-list>
+    <ion-item class="statusBg">
+        <ion-avatar class="avatar">
+            <img src="assets/user/mine.png">
+        </ion-avatar>
+        <ion-grid>
+            <ion-row style="text-align: center">
+                <ion-col *ngIf="!this.userService.getUserInfo().status">
+                    <button class="optBtn" ion-button small clear (click)="login()">登录</button>
+                    <button class="optBtn optBtnReg" ion-button small clear (click)="register()">注册</button>
+                </ion-col>
+                <ion-col *ngIf="this.userService.getUserInfo().status">
+                    <p style="padding: 13px;font-size: 24px;color: #03668d;">{{this.userService.getUserInfo().phone |
+                        hideMobileNum}}</p>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+</ion-list>

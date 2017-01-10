@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            添加燃气卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="1" [stepCon]="['添加燃气卡','手机验证','确认']"></tool-steps>
+    <div class="wrap">
+        <div class="phone">
+            <span>燃气公司：</span>
+            <input placeholder="点击选择燃气公司" type="text" [(ngModel)]="GasName" (focus)="selectCompus()">
+        </div>
+        <div class="confirm">
+            <span>卡号：</span>
+            <input placeholder="请输入燃气卡卡号" type="text" [(ngModel)]="GasCardNo">
+        </div>
+    </div>
+    <div full (click)="goNext()" class="myDefFullBtn">下一步</div>
+</ion-content>

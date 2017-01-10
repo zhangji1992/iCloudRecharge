@@ -1,0 +1,13 @@
+$tabs-ios-background: #eeeeee !default;
+$tabs-ios-tab-color-active: color($mlsColors, selectColor) !default;
+$background-color: #f0f0f0;
+
+//标题居中，返回按钮重写，底部border
+.toolbar-background-ios {
+    border-width: 0 !important;
+}
+
+.bar-button-ios {
+    position: absolute;
+    left: 10px;
+}

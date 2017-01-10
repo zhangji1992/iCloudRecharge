@@ -1,0 +1,64 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            燃气卡列表
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <p class="compusCardTitle">燃气卡</p>
+    <ion-list>
+        <ion-item *ngFor="let cardlist of gasCard.gasCardList">
+            <div class='compusCardEasyList'>
+                <div class="listMessage">
+                    <div>
+                        <p>卡号：{{cardlist.GasCardNo}}</p>
+                        <p>燃气公司：{{cardlist.SupplierName}}</p>
+                        <p>绑定时间：{{cardlist.Fromdate}}</p>
+                    </div>
+                </div>
+                <p class="handleEvent">
+                    <span class="fontColor" (click)="goToCharge(cardlist)">充值</span>
+                    <span>|</span>
+                    <span class="fontColor" (click)='goToChargeDetail(cardlist)'>充值明细</span>
+                </p>
+            </div>
+        </ion-item>
+    </ion-list>
+    <p class="compusCardTitle">燃气卡</p>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <div class="border">
+                    <div class="Mycontent">
+                         <span class="color01">
+                            <ion-icon name="pin" md="md-pin"></ion-icon>
+                        </span>
+                        <p class="myText">附近充值点</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border">
+                    <div class="Mycontent">
+                        <span class="color02">
+                            <ion-icon name="hand" md="md-hand"></ion-icon>
+                        </span>
+                        <p class="myText">燃气操作指南</p>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div class="border">
+                    <div class="Mycontent">
+                        <span class="color03">
+                            <ion-icon ios="ios-ionitron-outline" name="ionitron"></ion-icon>
+                        </span>
+                        <p class="myText">我的客服</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

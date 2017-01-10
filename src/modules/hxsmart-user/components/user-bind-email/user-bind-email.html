@@ -1,0 +1,13 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>{{confirmEmailTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="bindEmailContent">
+    <p class="bindEmailTip">{{confirmEmailTip}}</p>
+    <user-volid-email [verifyType]="verifyType"
+                      [emailAdd]="emailAdd"
+                      [nextStr]="nextStr"
+                      (confirmAfter)="confirmAfter($event)">
+    </user-volid-email>
+</ion-content>

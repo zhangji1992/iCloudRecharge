@@ -1,0 +1,96 @@
+gas-card-charge-detail ion-content {
+    background-color: #efefef !important;
+}
+
+gas-card-charge-detail ion-item {
+    background-color: #ffffff !important;
+    margin-top: 12px !important;
+    position: relative !important;
+    .item-inner {
+        border-bottom: none !important;
+    }
+}
+
+gas-card-charge-detail .chargeIMg {
+    position: absolute;
+    top: 58px;
+    left: 15px;
+    width: 10px;
+    height: 40px;
+}
+
+gas-card-charge-detail .chargeIMg span {
+    display: block;
+}
+
+gas-card-charge-detail .chargeIMg :nth-child(1) {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #28a9e5;
+    font-size: 10px;
+    line-height: 16px;
+    text-indent: 2px;
+    color: #28a9e5;
+}
+
+gas-card-charge-detail .chargeIMg :nth-child(2) {
+    width: 1px;
+    background-color: #28a9e5;
+    margin-left: 4px;
+}
+
+gas-card-charge-detail .chargeIMg :nth-child(3) {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 1px solid #28a9e5;
+    font-size: 10px;
+    line-height: 16px;
+    text-indent: 2px;
+    color: #28a9e5;
+}
+
+gas-card-charge-detail .MyTitle {
+    height: 120px;
+    background-color: #28a9e5;
+    position: relative;
+
+}
+
+gas-card-charge-detail .MyTitle p {
+    position: absolute;
+    width: 100%;
+    top: 35px;
+    text-align: center;
+    font-size: 25px;
+    z-index: 3;
+}
+
+gas-card-charge-detail .MyTitle img {
+    width: 90%;
+    height: 80px;
+    position: absolute;
+    left: 5%;
+    top: 38px;
+    z-index: 2;
+}
+
+gas-card-charge-detail .marginTop {
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+gas-card-charge-detail .marginTop01 {
+    margin-top: 10px;
+}
+
+gas-card-charge-detail .marginTop button {
+    font-size: 16px;
+    height: 33px;
+    background-color: #28a9e5;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 0 20px 0 20px;
+
+}

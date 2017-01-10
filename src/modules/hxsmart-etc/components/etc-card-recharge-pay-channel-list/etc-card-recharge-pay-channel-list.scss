@@ -1,0 +1,49 @@
+etc-card-recharge-pay-channel-list {
+    .itemWrap {
+        background: #fff;
+        border-top: 1px solid #e9e9e9;
+
+        .item {
+            border-bottom: 1px solid #e9e9e9;
+            overflow: hidden;
+            padding: 10px 0 10px 5%;
+
+            div {
+                float: left;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .logo {
+                width: 15%;
+
+                img {
+                    height: 30px;
+                }
+            }
+
+            .word {
+                width: 70%;
+            }
+
+            .check {
+                width: 10%;
+                padding-top: 5px;
+
+                img {
+                    height: 20px;
+                }
+            }
+        }
+    }
+
+    .more {
+        text-align: center;
+        background: #fff;
+        color: #848484;
+        font-size: 15px;
+        padding: 5px;
+        border-bottom: 1px solid #e9e9e9;
+    }
+}
+

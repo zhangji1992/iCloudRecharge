@@ -1,0 +1,59 @@
+<ion-header no-border>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            充值明细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="下拉刷新"
+            refreshingSpinner="bubbles"
+            refreshingText="更新中...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="MyTitle">
+        <p>燃气卡卡号：{{this.navParams.data.GasCardNo}}</p>
+        <img src="assets/compus/chargeDetail.png">
+    </div>
+    <ion-list>
+        <ion-item *ngFor="let list of gasCard.gasCardChargeDetail;let i=index">
+            <p class="marginTop01">
+                <span>￥ 金额:</span>
+                <span>{{list.totoalAmount}}</span>
+            </p>
+            <div class="chargeIMg" *ngIf="list.orderStatus!='等待交付' && list.orderStatus!='未支付'">
+                <span>ˇ</span>
+                <span [ngStyle]="{'height': span01height}"></span>
+                <span>ˇ</span>
+            </div>
+            <div class="chargeIMg" *ngIf="list.orderStatus=='等待交付' || list.orderStatus=='未支付'">
+                <span>ˇ</span>
+                <span [ngStyle]="{'height': span02height}"></span>
+                <span>ˇ</span>
+            </div>
+            <p class="marginTop">
+                <span>充值时间:</span>
+                <span>{{list.orderDate}}</span>
+            </p>
+            <p class="marginTop">
+                <span>充值状态:</span>
+                <span>{{list.orderStatus}}</span>
+            </p>
+            <p class="marginTop">
+                <button *ngIf="list.orderStatus=='未支付'" (click)="cancleOrder(list,i)">取消订单</button>
+                <button *ngIf="list.orderStatus=='未支付'" style="margin-left: 15px" (click)="goToPay(list)">去支付</button>
+                <button *ngIf="list.orderStatus=='等待交付'" (click)="moneyBack(list,i)">充值退款</button>
+            </p>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="加载更多...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

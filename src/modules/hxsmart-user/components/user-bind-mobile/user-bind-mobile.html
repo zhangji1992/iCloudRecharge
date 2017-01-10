@@ -1,0 +1,13 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>{{confirmMobileTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="bindMobileContent">
+    <p class="bindMobileTip">{{confirmMobileTip}}</p>
+    <user-volid-mobile [mobilePhone]="mobilePhone"
+                       [verifyType]="verifyType"
+                       [nextStr]="nextStr"
+                       (confirmAfter)="confirmAfter($event)">
+    </user-volid-mobile>
+</ion-content>

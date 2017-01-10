@@ -1,0 +1,21 @@
+<div class="myContent">
+    <p class="title">校园卡</p>
+    <div class="add" (click)="addCompusCard()">
+        <span>+</span>
+        <span>校园卡</span>
+    </div>
+    <ion-list no-lines>
+        <ion-item *ngFor="let cardlist of compusCard.cardEasyList">
+            <div class='compusCardEasyList' (click)='goToDetail(cardlist)'>
+                <img *ngIf="cardlist.SupplierPartyId==38" src="assets/compus/compusCardList01.png">
+                <img *ngIf="cardlist.SupplierPartyId==42" src="assets/compus/compusCardList02.png">
+                <div class="message">
+                    <p>姓名：{{cardlist.HoldClientNname}}</p>
+                    <p>卡号：{{cardlist.CardNo}}</p>
+                    <p>学校：{{cardlist.SupplierName}}</p>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</div>
+

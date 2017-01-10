@@ -1,0 +1,126 @@
+etc-card-list {
+    .item {
+        margin-top: -10px !important;
+    }
+    .list-md .item-block .item-inner {
+        border: none !important;
+    }
+    .list {
+        margin: 0 !important;
+    }
+
+    .etcCardTitle {
+        margin: 10px 0 5px 0;
+        padding-left: 20px;
+        font-size: 15px;
+        position: relative;
+        z-index: 2;
+        color: #a2a2a2;
+    }
+
+    ion-grid {
+        background-color: #ffffff;
+        ion-row {
+            ion-col {
+                padding: 10px;
+                .border {
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #c6c6c5;
+                    border-radius: 5px;
+                    padding: 10px 0;
+                    .Mycontent {
+                        margin: 0 auto;
+                        width: 90%;
+                        height: 65px;
+                        span {
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 20px;
+                            text-align: center;
+                            font-size: 24px;
+                            margin: 0 auto;
+                            color: #ffffff;
+                        }
+                        .myText {
+                            text-align: center;
+                            font-size: 13px;
+                            margin: 5px 0 0 0;
+                        }
+                        .color01 {
+                            background-color: #3aba3a;
+                        }
+                        .color02 {
+                            background-color: #ff9000;
+                        }
+                        .color03 {
+                            background-color: #c067ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .etcCardSimpleList {
+        background-color: #ffffff;
+        border: 1px solid #e9e9e9;
+        border-radius: 8px;
+        padding: 0 0 0 15px;
+        position: relative;
+    }
+
+    .listMessage {
+        overflow: hidden;
+        padding-bottom: 15px;
+
+        img {
+            width: 54px;
+            height: 54px;
+            float: left;
+            margin-top: 30px;
+        }
+
+        > div {
+            float: left;
+            margin-left: 21px;
+
+            p {
+                margin-top: 15px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .handleEvent {
+        border-top: 1px solid #dddddd;
+        margin-left: -4%;
+        overflow: hidden;
+
+        span {
+            display: block;
+            float: left;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px 0;
+        }
+
+        .fontColor {
+            color: #008d76;
+        }
+
+        :nth-child(1) {
+            width: 49%;
+        }
+
+        :nth-child(2) {
+            width: 1%;
+        }
+
+        :nth-child(3) {
+            width: 49%;
+        }
+    }
+}
+

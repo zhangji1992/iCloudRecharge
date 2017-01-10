@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>意见反馈</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-textarea class="textArea" placeholder="请输入您的宝贵意见或建议.（500字以内）" [(ngModel)]="inputContent"
+                  maxlength="500">
+    </ion-textarea>
+    <div class="add">
+        <div *ngFor="let picList of picArray; let i = index">
+            <div class="addImgDiv">
+                <img class="addImg" [attr.src]="picList.imgSrc">
+                <span class="imgClose" (click)="closePic(i)">x</span>
+            </div>
+        </div>
+        <div class="addPic" (click)="addPic()" *ngIf="picArray.length<4">
+            <ion-icon name="add"></ion-icon>
+        </div>
+    </div>
+    <div class="padding"></div>
+    <button class="fullBtn" ion-button full default (click)="commit()">提 交</button>
+</ion-content>

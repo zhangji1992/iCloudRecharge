@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>
+            添加校园卡
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <tool-steps [stepNow]="3" [stepCon]="['添加校园卡','手机验证','确认']"></tool-steps>
+    <div class="listWrap">
+        <div><span>姓名：</span>{{bindCardInfo.name}}</div>
+        <div><span>卡状态：</span>{{bindCardInfo.state}}</div>
+        <div><span>学校：</span>{{bindCardInfo.school}}</div>
+        <div><span>班级：</span>{{bindCardInfo.class}}</div>
+        <div><span>校园卡号：</span>{{bindCardInfo.cardNo}}</div>
+        <div><span>监护人：</span>{{bindCardInfo.parent}}</div>
+        <div><span>学生手机号：</span>{{bindCardInfo.phone1}}</div>
+        <div><span>家长手机号：</span>{{bindCardInfo.phone2}}</div>
+    </div>
+    <div class="myDefFullBtn" (click)="add()">确认添加</div>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar no-border-bottom>
+        <ion-title>
+            充值明细
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+            pullingIcon="arrow-dropdown"
+            pullingText="下拉刷新"
+            refreshingSpinner="bubbles"
+            refreshingText="更新中...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div class="MyTitle">
+        <p>校园卡卡号：{{navParams.data.CardNo}}</p>
+        <img src="assets/compus/chargeDetail.png">
+    </div>
+    <ion-list>
+        <ion-item *ngFor="let charge of compusCard.chargeList;let i=index">
+            <p>
+                <span>￥ 充值金额:</span>
+                <span>{{charge.totoalAmount}}</span>
+            </p>
+            <div class="chargeIMg">
+                <span>ˇ</span>
+                <span></span>
+                <span>ˇ</span>
+            </div>
+            <p class="marginTop">
+                <span>充值时间:</span>
+                <span>{{charge.ccompleteDatetime}}</span>
+            </p>
+            <p class="marginTop">
+                <span>充值状态:</span>
+                <span>{{charge.orderStatus}}</span>
+                <button *ngIf="charge.orderStatus=='未支付'" (click)="cancleWriteCrad(charge,i)">取消订单</button>
+                <button *ngIf="charge.orderStatus=='未支付'" style="margin-left: 15px" (click)="goToPay(charge)">去支付
+                </button>
+                <button *ngIf="charge.orderStatus=='等待交付'" (click)="applyBackMoney(charge,i)">充值退款</button>
+            </p>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="加载更多...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

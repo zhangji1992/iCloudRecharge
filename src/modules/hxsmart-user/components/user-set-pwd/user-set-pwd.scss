@@ -1,0 +1,80 @@
+user-set-pwd {
+
+}
+
+user-set-pwd .setPwd {
+    font-family: "Microsoft YaHei";
+    background-color: #F0F0F0;
+}
+
+user-set-pwd .setPwd .scroll-content {
+    overflow-y: auto;
+}
+
+user-set-pwd .setPwd ion-list {
+    margin-top: 21px;
+}
+
+user-set-pwd .setPwd ion-item {
+    background-color: #fff;
+    height: 56px;
+}
+
+user-set-pwd .bigBtn {
+    color: white;
+    background-color: #2A84C3;
+    margin: 65px auto;
+    width: 94%;
+}
+
+user-set-pwd .setPwd .list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block {
+    border-top: 1px solid #E6E6E6;
+}
+
+user-set-pwd .list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block {
+    border-bottom: 1px solid #E6E6E6;
+}
+
+user-set-pwd .item-input .label-md, .item-select .label-md, .item-datetime .label-md {
+    color: #000000;
+    font-size: 16px;
+}
+
+user-set-pwd .header-md:after {
+    border-top: 1px solid #DDDDDD;
+}
+
+user-set-pwd .item-md {
+    padding-right: 6px;
+    padding-left: 8px;
+}
+
+user-set-pwd .label-md {
+    margin: 13px 8px 13px 9px;
+}
+
+user-set-pwd .text-input-md {
+    margin: 13px 8px 13px -3px;
+    font-size: 15px;
+}
+
+user-set-pwd .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pwd .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+
+}
+
+user-set-pwd .item-md.item-input.input-has-focus .item-inner {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}
+
+user-set-pwd .list-md .item-input.input-has-focus:last-child {
+    border-bottom-color: #dedede;
+    box-shadow: none;
+}

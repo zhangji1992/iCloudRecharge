@@ -1,0 +1,16 @@
+<ion-header no-border>
+    <ion-navbar>
+        <ion-title>注册</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="completeRES">
+    <tool-steps [stepNow]="3" [stepCon]="['手机验证','设置密码','完成']"></tool-steps>
+    <div text-center style="margin-top: 10%;">
+        <div class="backgroundPic">
+            <ion-icon class="completeIcon" name="checkmark"></ion-icon>
+        </div>
+        <p class="completeText">恭喜您，注册完成</p>
+    </div>
+    <button class="fullBtn" (click)="complete()">完成</button>
+    <!--<button ion-button block (click)="complete()" class="bigBtn">完成</button>-->
+</ion-content>

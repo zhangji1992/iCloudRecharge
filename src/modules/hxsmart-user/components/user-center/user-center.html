@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar no-border>
+        <ion-buttons left="true">
+            <button ion-button icon-only (click)="goBack()">
+                <ion-icon name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>
+            个人中心
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="center">
+    <div class="contain">
+        <ion-list>
+            <ion-item>
+                手机号：{{this.userService.getUserInfo().phone}}
+                <button ion-button item-right clear (click)="goModifyMobile()">
+                    <ion-icon class="ion-Edit" ios="ios-create" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item *ngIf="!this.userService.getUserInfo().email">
+                邮箱：<span style="color:#888;">请绑定邮箱</span>
+                <button ion-button item-right clear (click)="goModifyEmail()">
+                    <ion-icon ios="ios-create" class="ion-Edit" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item *ngIf="this.userService.getUserInfo().email">
+                邮箱：{{this.userService.getUserInfo().email}}
+                <button ion-button item-right clear (click)="goModifyEmail()">
+                    <ion-icon ios="ios-create" class="ion-Edit" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item>
+                登录密码：******
+                <button ion-button item-right clear (click)="goModifyPwd()">
+                    <ion-icon ios="ios-create" class="ion-Edit" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item *ngIf="userService.getUserInfo().isSetPayPwd">
+                支付密码：******
+                <button ion-button item-right clear (click)="goPayPwd()">
+                    <ion-icon ios="ios-create" class="ion-Edit" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+            <ion-item *ngIf="!userService.getUserInfo().isSetPayPwd">
+                支付密码：<span style="color:#888;">请设置支付密码</span>
+                <button ion-button item-right clear (click)="setPayPwd()">
+                    <ion-icon ios="ios-create" class="ion-Edit" md="md-create" color="light"
+                              isActive="false"></ion-icon>
+                </button>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
